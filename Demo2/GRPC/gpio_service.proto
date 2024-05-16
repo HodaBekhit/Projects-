@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+// gRPC service definition for GPIO operations
+service GPIOService {
+    // RPC method to read the state of a GPIO pin
+    rpc ReadState(ReadStateRequest) returns (ReadStateResponse) {}
+
+    // RPC method to set the output state of a GPIO pin
+    rpc SetOutput(SetOutputRequest) returns (SetOutputResponse) {}
+
+    // RPC method to configure the mode of a GPIO pin
+    rpc ConfigurePin(ConfigurePinRequest) returns (ConfigurePinResponse) {}
+}
+
+// Request message for reading the state of a GPIO pin
+message ReadStateRequest {
+    int32 pin = 1; // The GPIO pin number
+}
+
+// Response message for reading the state of a GPIO pin
+message ReadStateResponse {
+    bool response = 1; // The state of the GPIO pin (true for high, false for low)
+}
+
+// Request message for setting the output state of a GPIO pin
+message SetOutputRequest {
+    int32 pin = 1; // The GPIO pin number
+    bool state = 2; // The desired state of the GPIO pin (true for high, false for low)
+}
+
+// Response message for setting the output state of a GPIO pin
+message SetOutputResponse {
+    bool response = 1; // Indicates if the operation was successful (true for success, false for failure)
+}
+
+// Request message for configuring the mode of a GPIO pin
+message ConfigurePinRequest {
+    int32 pin = 1; // The GPIO pin number
+    enum PinMode { // Enum to specify the pin mode (INPUT or OUTPUT)
+        INPUT = 0;
+        OUTPUT = 1;
+    }
+    PinMode mode = 2; // The mode to configure the GPIO pin (INPUT or OUTPUT)
+}
+
+// Response message for configuring the mode of a GPIO pin
+message ConfigurePinResponse {
+    bool response = 1; // Indicates if the operation was successful (true for success, false for failure)
+}
+

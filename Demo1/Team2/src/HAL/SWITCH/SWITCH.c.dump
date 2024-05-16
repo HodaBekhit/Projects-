@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c"/>
+    <file index="1" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h"/>
+    <file index="2" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/*x * File Name: SWITCH.cx * Layerx: HALx * Modulex: Switchx * Version  : V 0.0x * Createdx:  x * Authorx: Anas Khameesx */"/>
+    <tok fileIndex="0" linenr="9" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="10" column="1" str="/************************************************Includes************************************************/"/>
+    <tok fileIndex="0" linenr="11" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="13" column="1" str="#"/>
+    <tok fileIndex="0" linenr="13" column="2" str="include"/>
+    <tok fileIndex="0" linenr="13" column="10" str="&quot;SWITCH.h&quot;"/>
+    <tok fileIndex="0" linenr="14" column="1" str="#"/>
+    <tok fileIndex="0" linenr="14" column="2" str="include"/>
+    <tok fileIndex="0" linenr="14" column="10" str="&quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <tok fileIndex="0" linenr="15" column="1" str="#"/>
+    <tok fileIndex="0" linenr="15" column="2" str="include"/>
+    <tok fileIndex="0" linenr="15" column="10" str="&quot;MCAL/GPIO/GPIO_Validation.h&quot;"/>
+    <tok fileIndex="0" linenr="16" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="17" column="1" str="/************************************************Defines*************************************************/"/>
+    <tok fileIndex="0" linenr="18" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="19" column="1" str="#"/>
+    <tok fileIndex="0" linenr="19" column="2" str="define"/>
+    <tok fileIndex="0" linenr="19" column="9" str="MASK_SHIF_SW_CONNECTION"/>
+    <tok fileIndex="0" linenr="19" column="40" str="("/>
+    <tok fileIndex="0" linenr="19" column="41" str="3UL"/>
+    <tok fileIndex="0" linenr="19" column="44" str=")"/>
+    <tok fileIndex="0" linenr="20" column="1" str="#"/>
+    <tok fileIndex="0" linenr="20" column="2" str="define"/>
+    <tok fileIndex="0" linenr="20" column="9" str="MASK_GET_SW_CONNECTION_LSB"/>
+    <tok fileIndex="0" linenr="20" column="40" str="("/>
+    <tok fileIndex="0" linenr="20" column="41" str="1UL"/>
+    <tok fileIndex="0" linenr="20" column="44" str=")"/>
+    <tok fileIndex="0" linenr="23" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="24" column="1" str="/************************************************Variables***********************************************/"/>
+    <tok fileIndex="0" linenr="25" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="27" column="1" str="extern"/>
+    <tok fileIndex="0" linenr="27" column="8" str="SwitchCFG_t"/>
+    <tok fileIndex="0" linenr="27" column="21" str="Switches"/>
+    <tok fileIndex="0" linenr="27" column="29" str="["/>
+    <tok fileIndex="0" linenr="27" column="30" str="_SWITCHES_NUM"/>
+    <tok fileIndex="0" linenr="27" column="43" str="]"/>
+    <tok fileIndex="0" linenr="27" column="44" str=";"/>
+    <tok fileIndex="0" linenr="29" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="30" column="1" str="/*********************************************APIs Implementation****************************************/"/>
+    <tok fileIndex="0" linenr="31" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="33" column="1" str="/**x * @brief Initializes the switches by Provided Configuration.x * x * This function initializes the switches by configuring their GPIO pins according to the settingsx * specified in the SWITCHES array.x * @return ErrorStatus_t Returns SUCCESS if the switches are successfully initialized, otherwise returns an error code.x */"/>
+    <tok fileIndex="0" linenr="40" column="1" str="ErrorStatus_t"/>
+    <tok fileIndex="0" linenr="40" column="15" str="Switch_Init"/>
+    <tok fileIndex="0" linenr="40" column="26" str="("/>
+    <tok fileIndex="0" linenr="40" column="27" str="void"/>
+    <tok fileIndex="0" linenr="40" column="31" str=")"/>
+    <tok fileIndex="0" linenr="41" column="1" str="{"/>
+    <tok fileIndex="0" linenr="42" column="5" str="ErrorStatus_t"/>
+    <tok fileIndex="0" linenr="42" column="21" str="ReturnState"/>
+    <tok fileIndex="0" linenr="42" column="32" str=";"/>
+    <tok fileIndex="0" linenr="44" column="5" str="GPIO_CFG_t"/>
+    <tok fileIndex="0" linenr="44" column="16" str="Switch"/>
+    <tok fileIndex="0" linenr="44" column="22" str=";"/>
+    <tok fileIndex="0" linenr="46" column="5" str="uint8_t"/>
+    <tok fileIndex="0" linenr="46" column="13" str="SW_Num"/>
+    <tok fileIndex="0" linenr="46" column="19" str=";"/>
+    <tok fileIndex="0" linenr="48" column="5" str="Switch"/>
+    <tok fileIndex="0" linenr="48" column="11" str="."/>
+    <tok fileIndex="0" linenr="48" column="12" str="GPIO_Speed"/>
+    <tok fileIndex="0" linenr="48" column="22" str="="/>
+    <tok fileIndex="0" linenr="48" column="23" str="GPIO_HIGH_SPEED"/>
+    <tok fileIndex="0" linenr="48" column="38" str=";"/>
+    <tok fileIndex="0" linenr="49" column="5" str="Switch"/>
+    <tok fileIndex="0" linenr="49" column="11" str="."/>
+    <tok fileIndex="0" linenr="49" column="12" str="GPIO_AF"/>
+    <tok fileIndex="0" linenr="49" column="19" str="="/>
+    <tok fileIndex="0" linenr="49" column="20" str="GPIO_AF_DISABLED"/>
+    <tok fileIndex="0" linenr="49" column="36" str=";"/>
+    <tok fileIndex="0" linenr="51" column="5" str="for"/>
+    <tok fileIndex="0" linenr="51" column="9" str="("/>
+    <tok fileIndex="0" linenr="51" column="10" str="SW_Num"/>
+    <tok fileIndex="0" linenr="51" column="16" str="="/>
+    <tok fileIndex="0" linenr="51" column="17" str="0"/>
+    <tok fileIndex="0" linenr="51" column="18" str=";"/>
+    <tok fileIndex="0" linenr="51" column="19" str="SW_Num"/>
+    <tok fileIndex="0" linenr="51" column="25" str="&lt;"/>
+    <tok fileIndex="0" linenr="51" column="26" str="_SWITCHES_NUM"/>
+    <tok fileIndex="0" linenr="51" column="39" str=";"/>
+    <tok fileIndex="0" linenr="51" column="40" str="SW_Num"/>
+    <tok fileIndex="0" linenr="51" column="46" str="++"/>
+    <tok fileIndex="0" linenr="51" column="48" str=")"/>
+    <tok fileIndex="0" linenr="52" column="5" str="{"/>
+    <tok fileIndex="0" linenr="53" column="9" str="Switch"/>
+    <tok fileIndex="0" linenr="53" column="15" str="."/>
+    <tok fileIndex="0" linenr="53" column="16" str="GPIO_Port"/>
+    <tok fileIndex="0" linenr="53" column="25" str="="/>
+    <tok fileIndex="0" linenr="53" column="26" str="Switches"/>
+    <tok fileIndex="0" linenr="53" column="34" str="["/>
+    <tok fileIndex="0" linenr="53" column="35" str="SW_Num"/>
+    <tok fileIndex="0" linenr="53" column="41" str="]"/>
+    <tok fileIndex="0" linenr="53" column="42" str="."/>
+    <tok fileIndex="0" linenr="53" column="43" str="SW_Port"/>
+    <tok fileIndex="0" linenr="53" column="50" str=";"/>
+    <tok fileIndex="0" linenr="54" column="9" str="Switch"/>
+    <tok fileIndex="0" linenr="54" column="15" str="."/>
+    <tok fileIndex="0" linenr="54" column="16" str="GPIO_Pin"/>
+    <tok fileIndex="0" linenr="54" column="24" str="="/>
+    <tok fileIndex="0" linenr="54" column="25" str="Switches"/>
+    <tok fileIndex="0" linenr="54" column="33" str="["/>
+    <tok fileIndex="0" linenr="54" column="34" str="SW_Num"/>
+    <tok fileIndex="0" linenr="54" column="40" str="]"/>
+    <tok fileIndex="0" linenr="54" column="41" str="."/>
+    <tok fileIndex="0" linenr="54" column="42" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="54" column="48" str=";"/>
+    <tok fileIndex="0" linenr="55" column="9" str="Switch"/>
+    <tok fileIndex="0" linenr="55" column="15" str="."/>
+    <tok fileIndex="0" linenr="55" column="16" str="GPIO_Mode"/>
+    <tok fileIndex="0" linenr="55" column="25" str="="/>
+    <tok fileIndex="0" linenr="55" column="26" str="Switches"/>
+    <tok fileIndex="0" linenr="55" column="34" str="["/>
+    <tok fileIndex="0" linenr="55" column="35" str="SW_Num"/>
+    <tok fileIndex="0" linenr="55" column="41" str="]"/>
+    <tok fileIndex="0" linenr="55" column="42" str="."/>
+    <tok fileIndex="0" linenr="55" column="43" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="55" column="56" str=";"/>
+    <tok fileIndex="0" linenr="57" column="9" str="ReturnState"/>
+    <tok fileIndex="0" linenr="57" column="20" str="="/>
+    <tok fileIndex="0" linenr="57" column="21" str="GPIO_InitPin"/>
+    <tok fileIndex="0" linenr="57" column="33" str="("/>
+    <tok fileIndex="0" linenr="57" column="34" str="&amp;"/>
+    <tok fileIndex="0" linenr="57" column="35" str="Switch"/>
+    <tok fileIndex="0" linenr="57" column="41" str=")"/>
+    <tok fileIndex="0" linenr="57" column="42" str=";"/>
+    <tok fileIndex="0" linenr="58" column="5" str="}"/>
+    <tok fileIndex="0" linenr="60" column="5" str="return"/>
+    <tok fileIndex="0" linenr="60" column="12" str="ReturnState"/>
+    <tok fileIndex="0" linenr="60" column="23" str=";"/>
+    <tok fileIndex="0" linenr="61" column="4" str="}"/>
+    <tok fileIndex="0" linenr="63" column="1" str="/**x * @brief Gets the state of a switch Pressed or Released. x * @param SwitchNum The switch number to get the state of.x * @param SwitchState Pointer to store the state of the switch (1 for pressed, 0 for released).x * @return ErrorStatus_t Returns SUCCESS if the state is successfully retrieved, otherwise returns an error code:x *         - NULL_POINTER if the SwitchState pointer is NULL.x *         - WRONG_PARAMETER if SwitchNum is out of range.x */"/>
+    <tok fileIndex="0" linenr="71" column="4" str="ErrorStatus_t"/>
+    <tok fileIndex="0" linenr="71" column="18" str="Switch_GetState"/>
+    <tok fileIndex="0" linenr="71" column="33" str="("/>
+    <tok fileIndex="0" linenr="71" column="34" str="uint32_t"/>
+    <tok fileIndex="0" linenr="71" column="43" str="SwitchNum"/>
+    <tok fileIndex="0" linenr="71" column="53" str=","/>
+    <tok fileIndex="0" linenr="71" column="54" str="uint32_t"/>
+    <tok fileIndex="0" linenr="71" column="62" str="*"/>
+    <tok fileIndex="0" linenr="71" column="64" str="SwitchState"/>
+    <tok fileIndex="0" linenr="71" column="75" str=")"/>
+    <tok fileIndex="0" linenr="72" column="4" str="{"/>
+    <tok fileIndex="0" linenr="73" column="5" str="ErrorStatus_t"/>
+    <tok fileIndex="0" linenr="73" column="19" str="ReturnError"/>
+    <tok fileIndex="0" linenr="73" column="30" str=";"/>
+    <tok fileIndex="0" linenr="74" column="5" str="if"/>
+    <tok fileIndex="0" linenr="74" column="7" str="("/>
+    <tok fileIndex="0" linenr="74" column="8" str="SwitchState"/>
+    <tok fileIndex="0" linenr="74" column="19" str="=="/>
+    <tok fileIndex="0" linenr="74" column="21" str="NULL"/>
+    <tok fileIndex="0" linenr="74" column="25" str=")"/>
+    <tok fileIndex="0" linenr="75" column="5" str="{"/>
+    <tok fileIndex="0" linenr="76" column="9" str="ReturnError"/>
+    <tok fileIndex="0" linenr="76" column="20" str="="/>
+    <tok fileIndex="0" linenr="76" column="21" str="NULL_POINTER"/>
+    <tok fileIndex="0" linenr="76" column="33" str=";"/>
+    <tok fileIndex="0" linenr="77" column="5" str="}"/>
+    <tok fileIndex="0" linenr="78" column="5" str="else"/>
+    <tok fileIndex="0" linenr="78" column="10" str="if"/>
+    <tok fileIndex="0" linenr="78" column="12" str="("/>
+    <tok fileIndex="0" linenr="78" column="13" str="SwitchNum"/>
+    <tok fileIndex="0" linenr="78" column="22" str="&gt;"/>
+    <tok fileIndex="0" linenr="78" column="23" str="("/>
+    <tok fileIndex="0" linenr="78" column="24" str="uint32_t"/>
+    <tok fileIndex="0" linenr="78" column="32" str=")"/>
+    <tok fileIndex="0" linenr="78" column="33" str="_SWITCHES_NUM"/>
+    <tok fileIndex="0" linenr="78" column="46" str=")"/>
+    <tok fileIndex="0" linenr="79" column="5" str="{"/>
+    <tok fileIndex="0" linenr="80" column="9" str="ReturnError"/>
+    <tok fileIndex="0" linenr="80" column="20" str="="/>
+    <tok fileIndex="0" linenr="80" column="21" str="WRONG_PARAMETER"/>
+    <tok fileIndex="0" linenr="80" column="36" str=";"/>
+    <tok fileIndex="0" linenr="81" column="5" str="}"/>
+    <tok fileIndex="0" linenr="82" column="5" str="else"/>
+    <tok fileIndex="0" linenr="83" column="5" str="{"/>
+    <tok fileIndex="0" linenr="84" column="9" str="ReturnError"/>
+    <tok fileIndex="0" linenr="84" column="20" str="="/>
+    <tok fileIndex="0" linenr="84" column="21" str="GPIO_GetPinValue"/>
+    <tok fileIndex="0" linenr="84" column="37" str="("/>
+    <tok fileIndex="0" linenr="84" column="38" str="Switches"/>
+    <tok fileIndex="0" linenr="84" column="46" str="["/>
+    <tok fileIndex="0" linenr="84" column="47" str="SwitchNum"/>
+    <tok fileIndex="0" linenr="84" column="56" str="]"/>
+    <tok fileIndex="0" linenr="84" column="57" str="."/>
+    <tok fileIndex="0" linenr="84" column="58" str="SW_Port"/>
+    <tok fileIndex="0" linenr="84" column="65" str=","/>
+    <tok fileIndex="0" linenr="84" column="66" str="Switches"/>
+    <tok fileIndex="0" linenr="84" column="74" str="["/>
+    <tok fileIndex="0" linenr="84" column="75" str="SwitchNum"/>
+    <tok fileIndex="0" linenr="84" column="84" str="]"/>
+    <tok fileIndex="0" linenr="84" column="85" str="."/>
+    <tok fileIndex="0" linenr="84" column="86" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="84" column="92" str=","/>
+    <tok fileIndex="0" linenr="84" column="93" str="SwitchState"/>
+    <tok fileIndex="0" linenr="84" column="104" str=")"/>
+    <tok fileIndex="0" linenr="84" column="105" str=";"/>
+    <tok fileIndex="0" linenr="86" column="9" str="/**x         * ((SWITCHES[SwitchNum].SW_Connection)&gt;&gt;MASK_SHIF_SW_CONNECTION) : x         * @brief : I used tha same Mask of GPIO , so I want to shift it by 3 to get the value of connectionx         *  &amp;(MASK_GET_SW_CONNECTION_LSB):x         * @brief : Then I masked the Output of the previous MASK by 0x00000001 to Get the LSB bit to know the Switch State.x         * @brief : (*Switch State) is the result of XORing operation as follow  :x         * x         *   +----------------------+--------------------+--------+x             |   Switch State       | Switch Connection  | Result |x             +----------------------+--------------------+--------+x             | SWITCH_PRESSED  (1)  |    GPIO_IN_PU (1)  |   0    |x             | SWITCH_PRESSED  (1)  |    GPIO_IN_PD (0)  |   1    |x             | SWITCH_RELEASED (0)  |    GPIO_IN_PU (1)  |   1    |x             | SWITCH_RELEASED (0)  |    GPIO_IN_PD (0)  |   0    |x             +----------------------+--------------------+--------+           x         */"/>
+    <tok fileIndex="0" linenr="102" column="9" str="*"/>
+    <tok fileIndex="0" linenr="102" column="10" str="SwitchState"/>
+    <tok fileIndex="0" linenr="102" column="21" str="="/>
+    <tok fileIndex="0" linenr="102" column="22" str="("/>
+    <tok fileIndex="0" linenr="102" column="23" str="*"/>
+    <tok fileIndex="0" linenr="102" column="24" str="SwitchState"/>
+    <tok fileIndex="0" linenr="102" column="35" str=")"/>
+    <tok fileIndex="0" linenr="102" column="36" str="^"/>
+    <tok fileIndex="0" linenr="102" column="37" str="("/>
+    <tok fileIndex="0" linenr="102" column="38" str="("/>
+    <tok fileIndex="0" linenr="102" column="39" str="("/>
+    <tok fileIndex="0" linenr="102" column="40" str="Switches"/>
+    <tok fileIndex="0" linenr="102" column="48" str="["/>
+    <tok fileIndex="0" linenr="102" column="49" str="SwitchNum"/>
+    <tok fileIndex="0" linenr="102" column="58" str="]"/>
+    <tok fileIndex="0" linenr="102" column="59" str="."/>
+    <tok fileIndex="0" linenr="102" column="60" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="102" column="73" str=")"/>
+    <tok fileIndex="0" linenr="102" column="74" str="&gt;&gt;"/>
+    <tok fileIndex="0" linenr="102" column="76" str="MASK_SHIF_SW_CONNECTION"/>
+    <tok fileIndex="0" linenr="102" column="99" str=")"/>
+    <tok fileIndex="0" linenr="102" column="100" str="&amp;"/>
+    <tok fileIndex="0" linenr="102" column="101" str="("/>
+    <tok fileIndex="0" linenr="102" column="102" str="MASK_GET_SW_CONNECTION_LSB"/>
+    <tok fileIndex="0" linenr="102" column="128" str=")"/>
+    <tok fileIndex="0" linenr="102" column="129" str=")"/>
+    <tok fileIndex="0" linenr="102" column="130" str=";"/>
+    <tok fileIndex="0" linenr="103" column="5" str="}"/>
+    <tok fileIndex="0" linenr="104" column="5" str="return"/>
+    <tok fileIndex="0" linenr="104" column="12" str="ReturnError"/>
+    <tok fileIndex="0" linenr="104" column="23" str=";"/>
+    <tok fileIndex="0" linenr="105" column="4" str="}"/>
+  </rawtokens>
+  <suppressions>
+    <suppression errorId="unmatchedSuppression" />
+    <suppression errorId="missingIncludeSystem" />
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c89"/>
+    <cpp version="c++03"/>
+  </standards>
+  <directivelist>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="13" str="#include &quot;SWITCH.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="14" str="#include &quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="15" str="#include &quot;MCAL/GPIO/GPIO_Validation.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="19" str="#define MASK_SHIF_SW_CONNECTION (3UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="20" str="#define MASK_GET_SW_CONNECTION_LSB (1UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="1" str="#ifndef HAL_SWITCH_SWITCH_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="2" str="#define HAL_SWITCH_SWITCH_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="7" str="#include &quot;Std_Lib/Std_Libraries.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="8" str="#include &quot;SWITCH_CFG.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="13" str="#define SWITCH_PRESSED (1UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="14" str="#define SWITCH_RELEASED (0UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="16" str="#define SW_PULL_UP (0x00000008UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="17" str="#define SW_PULL_DOWN (0x00000010UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="64" str="#endif"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="1" str="#ifndef HAL_SWITCH_SWITCH_CFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="2" str="#define HAL_SWITCH_SWITCH_CFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="55" str="#endif"/>
+  </directivelist>
+  <macro-usage>
+    <macro name="MASK_GET_SW_CONNECTION_LSB" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" line="20" column="9" usefile="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" useline="102" usecolumn="102" is-known-value="true"/>
+    <macro name="MASK_SHIF_SW_CONNECTION" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" line="19" column="9" usefile="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" useline="102" usecolumn="76" is-known-value="true"/>
+  </macro-usage>
+  <tokenlist>
+    <token id="0x5c73f5ef64e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="30" column="9" str="enum" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5efd5b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="30" column="0" str="SW_NUM_t" scope="0x5c73f5efef70" type="name" type-scope="0x5c73f5eff100"/>
+    <token id="0x5c73f5ef0680" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="31" column="1" str="{" scope="0x5c73f5eff100" link="0x5c73f5ee3b50" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5ef0550" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="32" column="5" str="SWITCH_1" scope="0x5c73f5eff100" type="name" values="0x5c73f5efa3c0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5ee37b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="32" column="13" str="," scope="0x5c73f5eff100"/>
+    <token id="0x5c73f5ee38f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="33" column="5" str="_SWITCHES_NUM" scope="0x5c73f5eff100" type="name" values="0x5c73f5efbe70" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5ee3b50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="34" column="1" str="}" scope="0x5c73f5eff100" link="0x5c73f5ef0680"/>
+    <token id="0x5c73f5efd6a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="34" column="0" str=";" scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5efd790" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="9" str="struct" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5efe580" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="0" str="SwitchCFG_t" scope="0x5c73f5efef70" type="name" type-scope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f05030" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="16" str="{" scope="0x5c73f5eff290" link="0x5c73f5f00de0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f05120" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="5" str="void" scope="0x5c73f5eff290" type="name" astParent="0x5c73f5efe220"/>
+    <token id="0x5c73f5efe220" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="10" str="*" scope="0x5c73f5eff290" type="op" isArithmeticalOp="true" astOperand1="0x5c73f5f05120" astOperand2="0x5c73f5efe310"/>
+    <token id="0x5c73f5efe310" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="11" str="SW_Port" scope="0x5c73f5eff290" type="name" varId="1" variable="0x5c73f5f01460" astParent="0x5c73f5efe220" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5efe400" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="18" str=";" scope="0x5c73f5eff290"/>
+    <token id="0x5c73f5efe040" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="5" str="uint32_t" scope="0x5c73f5eff290" type="name"/>
+    <token id="0x5c73f5efe130" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="14" str="SW_Pin" scope="0x5c73f5eff290" type="name" varId="2" variable="0x5c73f5f01540" values="0x5c73f5efd170" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5efe190" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="20" str=";" scope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f00ab0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="5" str="uint32_t" scope="0x5c73f5eff290" type="name"/>
+    <token id="0x5c73f5f00c00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="14" str="SW_Connection" scope="0x5c73f5eff290" type="name" varId="3" variable="0x5c73f5f01620" values="0x5c73f5efc810" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f00cf0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="27" str=";" scope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f00de0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="41" column="1" str="}" scope="0x5c73f5eff290" link="0x5c73f5f05030"/>
+    <token id="0x5c73f5f02f20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="41" column="0" str=";" scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5f001b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="1" str="ErrorStatus_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5effe80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="15" str="Switch_Init" scope="0x5c73f5efef70" type="name" function="0x5c73f5f02740"/>
+    <token id="0x5c73f5f00720" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="26" str="(" scope="0x5c73f5efef70" link="0x5c73f5f00900"/>
+    <token id="0x5c73f5f00810" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="27" str="void" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f00900" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="31" str=")" scope="0x5c73f5efef70" link="0x5c73f5f00720"/>
+    <token id="0x5c73f5f00540" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="32" str=";" scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5f00630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="1" str="ErrorStatus_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f00690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="15" str="Switch_GetState" scope="0x5c73f5efef70" type="name" function="0x5c73f5f02690"/>
+    <token id="0x5c73f5f00360" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="30" str="(" scope="0x5c73f5efef70" link="0x5c73f5efb490"/>
+    <token id="0x5c73f5efc5c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="31" str="uint32_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5efc6b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="40" str="SwitchNum" scope="0x5c73f5efef70" type="name" varId="4"/>
+    <token id="0x5c73f5efc7a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="50" str="," scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5efc3e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="51" str="uint32_t" scope="0x5c73f5efef70" type="name" astParent="0x5c73f5efc4d0"/>
+    <token id="0x5c73f5efc4d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="59" str="*" scope="0x5c73f5efef70" type="op" isArithmeticalOp="true" astOperand1="0x5c73f5efc3e0" astOperand2="0x5c73f5efc530"/>
+    <token id="0x5c73f5efc530" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="61" str="SwitchState" scope="0x5c73f5efef70" type="name" varId="5" astParent="0x5c73f5efc4d0"/>
+    <token id="0x5c73f5efb490" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="72" str=")" scope="0x5c73f5efef70" link="0x5c73f5f00360"/>
+    <token id="0x5c73f5efb580" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="73" str=";" scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5efa700" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="1" str="extern" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5efa7f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="8" str="struct" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5efda60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="0" str="SwitchCFG_t" scope="0x5c73f5efef70" type="name" type-scope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f05210" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="21" str="Switches" scope="0x5c73f5efef70" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5efa970" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5efa970" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="29" str="[" scope="0x5c73f5efef70" link="0x5c73f5f053f0" astOperand1="0x5c73f5f05210" astOperand2="0x5c73f5f05300" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f05300" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="30" str="_SWITCHES_NUM" scope="0x5c73f5efef70" type="name" values="0x5c73f5efa6e0" astParent="0x5c73f5efa970" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5f053f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="43" str="]" scope="0x5c73f5efef70" link="0x5c73f5efa970"/>
+    <token id="0x5c73f5f05450" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="27" column="44" str=";" scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5f05540" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="40" column="1" str="ErrorStatus_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f05630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="40" column="15" str="Switch_Init" scope="0x5c73f5efef70" type="name" function="0x5c73f5f02740"/>
+    <token id="0x5c73f5f05690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="40" column="26" str="(" scope="0x5c73f5efef70" link="0x5c73f5f057f0"/>
+    <token id="0x5c73f5f05790" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="40" column="27" str="void" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f057f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="40" column="31" str=")" scope="0x5c73f5efef70" link="0x5c73f5f05690"/>
+    <token id="0x5c73f5f058f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="41" column="1" str="{" scope="0x5c73f5eff420" link="0x5c73f5f09050"/>
+    <token id="0x5c73f5efa620" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="42" column="5" str="ErrorStatus_t" scope="0x5c73f5eff420" type="name"/>
+    <token id="0x5c73f5efa680" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="42" column="21" str="ReturnState" scope="0x5c73f5eff420" type="name" varId="7" variable="0x5c73f5f01700"/>
+    <token id="0x5c73f5f05a70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="42" column="32" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f05b60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="44" column="5" str="GPIO_CFG_t" scope="0x5c73f5eff420" type="name"/>
+    <token id="0x5c73f5f05c60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="44" column="16" str="Switch" scope="0x5c73f5eff420" type="name" varId="8" variable="0x5c73f5f017e0"/>
+    <token id="0x5c73f5f05cc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="44" column="22" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f05dc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="46" column="5" str="uint8_t" scope="0x5c73f5eff420" type="name"/>
+    <token id="0x5c73f5f05e20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="46" column="13" str="SW_Num" scope="0x5c73f5eff420" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5f00700" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f05f20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="46" column="19" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f05f80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="5" str="Switch" scope="0x5c73f5eff420" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f06080"/>
+    <token id="0x5c73f5f06080" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="11" str="." scope="0x5c73f5eff420" astParent="0x5c73f5ef9d40" astOperand1="0x5c73f5f05f80" astOperand2="0x5c73f5ef9ce0"/>
+    <token id="0x5c73f5ef9ce0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="12" str="GPIO_Speed" scope="0x5c73f5eff420" type="name" varId="10" astParent="0x5c73f5f06080"/>
+    <token id="0x5c73f5ef9d40" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="22" str="=" scope="0x5c73f5eff420" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f06080" astOperand2="0x5c73f5f06200"/>
+    <token id="0x5c73f5f06200" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="23" str="GPIO_HIGH_SPEED" scope="0x5c73f5eff420" type="name" astParent="0x5c73f5ef9d40"/>
+    <token id="0x5c73f5f062f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="48" column="38" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f063f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="5" str="Switch" scope="0x5c73f5eff420" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f06450"/>
+    <token id="0x5c73f5f06450" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="11" str="." scope="0x5c73f5eff420" astParent="0x5c73f5f065b0" astOperand1="0x5c73f5f063f0" astOperand2="0x5c73f5f06550"/>
+    <token id="0x5c73f5f06550" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="12" str="GPIO_AF" scope="0x5c73f5eff420" type="name" varId="11" astParent="0x5c73f5f06450"/>
+    <token id="0x5c73f5f065b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="19" str="=" scope="0x5c73f5eff420" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f06450" astOperand2="0x5c73f5f066b0"/>
+    <token id="0x5c73f5f066b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="20" str="GPIO_AF_DISABLED" scope="0x5c73f5eff420" type="name" astParent="0x5c73f5f065b0"/>
+    <token id="0x5c73f5f06710" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="49" column="36" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f06810" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="5" str="for" scope="0x5c73f5eff420" type="name" astParent="0x5c73f5f06870"/>
+    <token id="0x5c73f5f06870" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="9" str="(" scope="0x5c73f5eff420" link="0x5c73f5f07050" astOperand1="0x5c73f5f06810" astOperand2="0x5c73f5f06b30"/>
+    <token id="0x5c73f5f06970" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="10" str="SW_Num" scope="0x5c73f5eff420" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5ee3ab0" astParent="0x5c73f5f069d0" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f069d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="16" str="=" scope="0x5c73f5eff420" type="op" isAssignmentOp="true" values="0x5c73f5efc330" astParent="0x5c73f5f06b30" astOperand1="0x5c73f5f06970" astOperand2="0x5c73f5f06ad0" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f06ad0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="17" str="0" scope="0x5c73f5eff420" type="number" isInt="true" values="0x5c73f5efc5a0" astParent="0x5c73f5f069d0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x5c73f5f06b30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="18" str=";" scope="0x5c73f5eff420" astParent="0x5c73f5f06870" astOperand1="0x5c73f5f069d0" astOperand2="0x5c73f5f06e10"/>
+    <token id="0x5c73f5f06c30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="19" str="SW_Num" scope="0x5c73f5eff420" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5efdad0" astParent="0x5c73f5efc280" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5efc280" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="25" str="&lt;" scope="0x5c73f5eff420" type="op" isComparisonOp="true" astParent="0x5c73f5f06e10" astOperand1="0x5c73f5f06c30" astOperand2="0x5c73f5f06d20" valueType-type="bool" valueType-reference="None"/>
+    <token id="0x5c73f5f06d20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="26" str="_SWITCHES_NUM" scope="0x5c73f5eff420" type="name" values="0x5c73f5eee670" astParent="0x5c73f5efc280" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5f06e10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="39" str=";" scope="0x5c73f5eff420" astParent="0x5c73f5f06b30" astOperand1="0x5c73f5efc280" astOperand2="0x5c73f5f06f60"/>
+    <token id="0x5c73f5f06e70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="40" str="SW_Num" scope="0x5c73f5eff420" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5f00e50" astParent="0x5c73f5f06f60" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f06f60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="46" str="++" scope="0x5c73f5eff420" type="op" values="0x5c73f5efdf90" astParent="0x5c73f5f06e10" astOperand1="0x5c73f5f06e70" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x5c73f5f07050" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="51" column="48" str=")" scope="0x5c73f5eff420" link="0x5c73f5f06870"/>
+    <token id="0x5c73f5f070b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="52" column="5" str="{" scope="0x5c73f5eff5b0" link="0x5c73f5f08d90"/>
+    <token id="0x5c73f5f071b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="9" str="Switch" scope="0x5c73f5eff5b0" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f07210"/>
+    <token id="0x5c73f5f07210" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="15" str="." scope="0x5c73f5eff5b0" astParent="0x5c73f5f07370" astOperand1="0x5c73f5f071b0" astOperand2="0x5c73f5f07310"/>
+    <token id="0x5c73f5f07310" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="16" str="GPIO_Port" scope="0x5c73f5eff5b0" type="name" varId="12" astParent="0x5c73f5f07210"/>
+    <token id="0x5c73f5f07370" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="25" str="=" scope="0x5c73f5eff5b0" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f07210" astOperand2="0x5c73f5f07730"/>
+    <token id="0x5c73f5f07470" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="26" str="Switches" scope="0x5c73f5eff5b0" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f074d0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f074d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="34" str="[" scope="0x5c73f5eff5b0" link="0x5c73f5f07630" astParent="0x5c73f5f07730" astOperand1="0x5c73f5f07470" astOperand2="0x5c73f5f075d0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f075d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="35" str="SW_Num" scope="0x5c73f5eff5b0" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5efb670" astParent="0x5c73f5f074d0" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f07630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="41" str="]" scope="0x5c73f5eff5b0" link="0x5c73f5f074d0"/>
+    <token id="0x5c73f5f07730" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="42" str="." scope="0x5c73f5eff5b0" astParent="0x5c73f5f07370" astOperand1="0x5c73f5f074d0" astOperand2="0x5c73f5efdee0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5efdee0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="43" str="SW_Port" scope="0x5c73f5eff5b0" type="name" varId="18" variable="0x5c73f5f01460" astParent="0x5c73f5f07730" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f07820" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="53" column="50" str=";" scope="0x5c73f5eff5b0"/>
+    <token id="0x5c73f5f07910" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="9" str="Switch" scope="0x5c73f5eff5b0" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f07970"/>
+    <token id="0x5c73f5f07970" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="15" str="." scope="0x5c73f5eff5b0" astParent="0x5c73f5f07b50" astOperand1="0x5c73f5f07910" astOperand2="0x5c73f5f07a60"/>
+    <token id="0x5c73f5f07a60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="16" str="GPIO_Pin" scope="0x5c73f5eff5b0" type="name" varId="13" astParent="0x5c73f5f07970"/>
+    <token id="0x5c73f5f07b50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="24" str="=" scope="0x5c73f5eff5b0" type="op" isAssignmentOp="true" values="0x5c73f5efeb30" astOperand1="0x5c73f5f07970" astOperand2="0x5c73f5f07e70"/>
+    <token id="0x5c73f5f07bb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="25" str="Switches" scope="0x5c73f5eff5b0" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f07cb0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f07cb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="33" str="[" scope="0x5c73f5eff5b0" link="0x5c73f5f07e10" astParent="0x5c73f5f07e70" astOperand1="0x5c73f5f07bb0" astOperand2="0x5c73f5f07d10" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f07d10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="34" str="SW_Num" scope="0x5c73f5eff5b0" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5f00be0" astParent="0x5c73f5f07cb0" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f07e10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="40" str="]" scope="0x5c73f5eff5b0" link="0x5c73f5f07cb0"/>
+    <token id="0x5c73f5f07e70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="41" str="." scope="0x5c73f5eff5b0" values="0x5c73f5efe6e0" astParent="0x5c73f5f07b50" astOperand1="0x5c73f5f07cb0" astOperand2="0x5c73f5f07f70" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f07f70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="42" str="SW_Pin" scope="0x5c73f5eff5b0" type="name" varId="19" variable="0x5c73f5f01540" values="0x5c73f5ee43c0" astParent="0x5c73f5f07e70" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f07fd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="54" column="48" str=";" scope="0x5c73f5eff5b0"/>
+    <token id="0x5c73f5f080d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="9" str="Switch" scope="0x5c73f5eff5b0" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f08130"/>
+    <token id="0x5c73f5f08130" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="15" str="." scope="0x5c73f5eff5b0" astParent="0x5c73f5f08290" astOperand1="0x5c73f5f080d0" astOperand2="0x5c73f5f08230"/>
+    <token id="0x5c73f5f08230" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="16" str="GPIO_Mode" scope="0x5c73f5eff5b0" type="name" varId="14" astParent="0x5c73f5f08130"/>
+    <token id="0x5c73f5f08290" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="25" str="=" scope="0x5c73f5eff5b0" type="op" isAssignmentOp="true" values="0x5c73f5eefb90" astOperand1="0x5c73f5f08130" astOperand2="0x5c73f5f08550"/>
+    <token id="0x5c73f5f08390" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="26" str="Switches" scope="0x5c73f5eff5b0" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f083f0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f083f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="34" str="[" scope="0x5c73f5eff5b0" link="0x5c73f5efa2d0" astParent="0x5c73f5f08550" astOperand1="0x5c73f5f08390" astOperand2="0x5c73f5f084f0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f084f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="35" str="SW_Num" scope="0x5c73f5eff5b0" type="name" varId="9" variable="0x5c73f5f018c0" values="0x5c73f5efffb0" astParent="0x5c73f5f083f0" valueType-type="char" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5efa2d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="41" str="]" scope="0x5c73f5eff5b0" link="0x5c73f5f083f0"/>
+    <token id="0x5c73f5f08550" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="42" str="." scope="0x5c73f5eff5b0" values="0x5c73f5f00220" astParent="0x5c73f5f08290" astOperand1="0x5c73f5f083f0" astOperand2="0x5c73f5f08640" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f08640" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="43" str="SW_Connection" scope="0x5c73f5eff5b0" type="name" varId="20" variable="0x5c73f5f01620" values="0x5c73f5eee610" astParent="0x5c73f5f08550" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f08730" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="55" column="56" str=";" scope="0x5c73f5eff5b0"/>
+    <token id="0x5c73f5f08820" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="9" str="ReturnState" scope="0x5c73f5eff5b0" type="name" varId="7" variable="0x5c73f5f01700" astParent="0x5c73f5f08910"/>
+    <token id="0x5c73f5f08910" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="20" str="=" scope="0x5c73f5eff5b0" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f08820" astOperand2="0x5c73f5f08a70"/>
+    <token id="0x5c73f5f08970" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="21" str="GPIO_InitPin" scope="0x5c73f5eff5b0" type="name" astParent="0x5c73f5f08a70"/>
+    <token id="0x5c73f5f08a70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="33" str="(" scope="0x5c73f5eff5b0" link="0x5c73f5f08c30" astParent="0x5c73f5f08910" astOperand1="0x5c73f5f08970" astOperand2="0x5c73f5f08ad0"/>
+    <token id="0x5c73f5f08ad0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="34" str="&amp;" scope="0x5c73f5eff5b0" type="op" values="0x5c73f5ee44f0" astParent="0x5c73f5f08a70" astOperand1="0x5c73f5f08bd0"/>
+    <token id="0x5c73f5f08bd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="35" str="Switch" scope="0x5c73f5eff5b0" type="name" varId="8" variable="0x5c73f5f017e0" astParent="0x5c73f5f08ad0"/>
+    <token id="0x5c73f5f08c30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="41" str=")" scope="0x5c73f5eff5b0" link="0x5c73f5f08a70"/>
+    <token id="0x5c73f5f08d30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="57" column="42" str=";" scope="0x5c73f5eff5b0"/>
+    <token id="0x5c73f5f08d90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="58" column="5" str="}" scope="0x5c73f5eff5b0" link="0x5c73f5f070b0"/>
+    <token id="0x5c73f5f08e90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="60" column="5" str="return" scope="0x5c73f5eff420" type="name" astOperand1="0x5c73f5f08ef0"/>
+    <token id="0x5c73f5f08ef0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="60" column="12" str="ReturnState" scope="0x5c73f5eff420" type="name" varId="7" variable="0x5c73f5f01700" astParent="0x5c73f5f08e90"/>
+    <token id="0x5c73f5f08ff0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="60" column="23" str=";" scope="0x5c73f5eff420"/>
+    <token id="0x5c73f5f09050" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="61" column="4" str="}" scope="0x5c73f5eff420" link="0x5c73f5f058f0"/>
+    <token id="0x5c73f5f09150" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="4" str="ErrorStatus_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f091b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="18" str="Switch_GetState" scope="0x5c73f5efef70" type="name" function="0x5c73f5f02690"/>
+    <token id="0x5c73f5f092b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="33" str="(" scope="0x5c73f5efef70" link="0x5c73f5f09730"/>
+    <token id="0x5c73f5f09310" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="34" str="uint32_t" scope="0x5c73f5efef70" type="name"/>
+    <token id="0x5c73f5f09410" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="43" str="SwitchNum" scope="0x5c73f5efef70" type="name" varId="15" variable="0x5c73f5f01a80" values="0x5c73f5f00490" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f09470" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="53" str="," scope="0x5c73f5efef70"/>
+    <token id="0x5c73f5f09570" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="54" str="uint32_t" scope="0x5c73f5efef70" type="name" astParent="0x5c73f5f095d0"/>
+    <token id="0x5c73f5f095d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="62" str="*" scope="0x5c73f5efef70" type="op" isArithmeticalOp="true" astOperand1="0x5c73f5f09570" astOperand2="0x5c73f5f096d0"/>
+    <token id="0x5c73f5f096d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="64" str="SwitchState" scope="0x5c73f5efef70" type="name" varId="16" variable="0x5c73f5f01b60" astParent="0x5c73f5f095d0" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f09730" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="71" column="75" str=")" scope="0x5c73f5efef70" link="0x5c73f5f092b0"/>
+    <token id="0x5c73f5f09830" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="72" column="4" str="{" scope="0x5c73f5eff740" link="0x5c73f5f0d880"/>
+    <token id="0x5c73f5f09890" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="73" column="5" str="ErrorStatus_t" scope="0x5c73f5eff740" type="name"/>
+    <token id="0x5c73f5f09990" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="73" column="19" str="ReturnError" scope="0x5c73f5eff740" type="name" varId="17" variable="0x5c73f5f019a0"/>
+    <token id="0x5c73f5efbde0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="73" column="30" str=";" scope="0x5c73f5eff740"/>
+    <token id="0x5c73f5f09a80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="5" str="if" scope="0x5c73f5eff740" type="name" astParent="0x5c73f5f09b70"/>
+    <token id="0x5c73f5f09b70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="7" str="(" scope="0x5c73f5eff740" link="0x5c73f5f09e10" astOperand1="0x5c73f5f09a80" astOperand2="0x5c73f5f09cc0"/>
+    <token id="0x5c73f5f09bd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="8" str="SwitchState" scope="0x5c73f5eff740" type="name" varId="16" variable="0x5c73f5f01b60" astParent="0x5c73f5f09cc0" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f09cc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="19" str="==" scope="0x5c73f5eff740" type="op" isComparisonOp="true" astParent="0x5c73f5f09b70" astOperand1="0x5c73f5f09bd0" astOperand2="0x5c73f5f09db0" valueType-type="bool" valueType-reference="None"/>
+    <token id="0x5c73f5f09db0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="21" str="NULL" scope="0x5c73f5eff740" type="name" values="0x5c73f5ef9da0" astParent="0x5c73f5f09cc0"/>
+    <token id="0x5c73f5f09e10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="74" column="25" str=")" scope="0x5c73f5eff740" link="0x5c73f5f09b70"/>
+    <token id="0x5c73f5f09f10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="75" column="5" str="{" scope="0x5c73f5eff8d0" link="0x5c73f5f0a230"/>
+    <token id="0x5c73f5f09f70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="76" column="9" str="ReturnError" scope="0x5c73f5eff8d0" type="name" varId="17" variable="0x5c73f5f019a0" astParent="0x5c73f5f0a070"/>
+    <token id="0x5c73f5f0a070" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="76" column="20" str="=" scope="0x5c73f5eff8d0" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f09f70" astOperand2="0x5c73f5f0a0d0"/>
+    <token id="0x5c73f5f0a0d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="76" column="21" str="NULL_POINTER" scope="0x5c73f5eff8d0" type="name" astParent="0x5c73f5f0a070"/>
+    <token id="0x5c73f5f0a1d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="76" column="33" str=";" scope="0x5c73f5eff8d0"/>
+    <token id="0x5c73f5f0a230" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="77" column="5" str="}" scope="0x5c73f5eff8d0" link="0x5c73f5f09f10"/>
+    <token id="0x5c73f5f0a330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="5" str="else" scope="0x5c73f5eff740" type="name"/>
+    <token id="0x5c73f5f0cc00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="0" str="{" scope="0x5c73f5effa60" link="0x5c73f5f0ce20"/>
+    <token id="0x5c73f5f0a390" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="10" str="if" scope="0x5c73f5effa60" type="name" astParent="0x5c73f5f0a490"/>
+    <token id="0x5c73f5f0a490" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="12" str="(" scope="0x5c73f5effa60" link="0x5c73f5f0a910" astOperand1="0x5c73f5f0a390" astOperand2="0x5c73f5f0a5f0"/>
+    <token id="0x5c73f5f0a4f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="13" str="SwitchNum" scope="0x5c73f5effa60" type="name" varId="15" variable="0x5c73f5f01a80" values="0x5c73f5efe200" astParent="0x5c73f5f0a5f0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0a5f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="22" str="&gt;" scope="0x5c73f5effa60" type="op" isComparisonOp="true" astParent="0x5c73f5f0a490" astOperand1="0x5c73f5f0a4f0" astOperand2="0x5c73f5f0a650" valueType-type="bool" valueType-reference="None"/>
+    <token id="0x5c73f5f0a650" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="23" str="(" scope="0x5c73f5effa60" link="0x5c73f5f0a7b0" values="0x5c73f5efcd20" astParent="0x5c73f5f0a5f0" astOperand1="0x5c73f5f0a8b0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0a750" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="24" str="uint32_t" scope="0x5c73f5effa60" type="name"/>
+    <token id="0x5c73f5f0a7b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="32" str=")" scope="0x5c73f5effa60" link="0x5c73f5f0a650"/>
+    <token id="0x5c73f5f0a8b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="33" str="_SWITCHES_NUM" scope="0x5c73f5effa60" type="name" values="0x5c73f5efeef0" astParent="0x5c73f5f0a650" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x5c73f5eff100"/>
+    <token id="0x5c73f5f0a910" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="78" column="46" str=")" scope="0x5c73f5effa60" link="0x5c73f5f0a490"/>
+    <token id="0x5c73f5f0aa10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="79" column="5" str="{" scope="0x5c73f5f010d0" link="0x5c73f5ef9920"/>
+    <token id="0x5c73f5f0aa70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="80" column="9" str="ReturnError" scope="0x5c73f5f010d0" type="name" varId="17" variable="0x5c73f5f019a0" astParent="0x5c73f5f0ab70"/>
+    <token id="0x5c73f5f0ab70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="80" column="20" str="=" scope="0x5c73f5f010d0" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f0aa70" astOperand2="0x5c73f5f0abd0"/>
+    <token id="0x5c73f5f0abd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="80" column="21" str="WRONG_PARAMETER" scope="0x5c73f5f010d0" type="name" astParent="0x5c73f5f0ab70"/>
+    <token id="0x5c73f5f0acd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="80" column="36" str=";" scope="0x5c73f5f010d0"/>
+    <token id="0x5c73f5ef9920" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="81" column="5" str="}" scope="0x5c73f5f010d0" link="0x5c73f5f0aa10"/>
+    <token id="0x5c73f5f0ad30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="82" column="5" str="else" scope="0x5c73f5effa60" type="name"/>
+    <token id="0x5c73f5f0ae20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="83" column="5" str="{" scope="0x5c73f5f01260" link="0x5c73f5f0d630"/>
+    <token id="0x5c73f5f0af10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="9" str="ReturnError" scope="0x5c73f5f01260" type="name" varId="17" variable="0x5c73f5f019a0" astParent="0x5c73f5f0b000"/>
+    <token id="0x5c73f5f0b000" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="20" str="=" scope="0x5c73f5f01260" type="op" isAssignmentOp="true" astOperand1="0x5c73f5f0af10" astOperand2="0x5c73f5f0b150"/>
+    <token id="0x5c73f5f0b0f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="21" str="GPIO_GetPinValue" scope="0x5c73f5f01260" type="name" astParent="0x5c73f5f0b150"/>
+    <token id="0x5c73f5f0b150" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="37" str="(" scope="0x5c73f5f01260" link="0x5c73f5f0bc70" astParent="0x5c73f5f0b000" astOperand1="0x5c73f5f0b0f0" astOperand2="0x5c73f5f0bb10"/>
+    <token id="0x5c73f5f0b270" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="38" str="Switches" scope="0x5c73f5f01260" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f0b2d0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0b2d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="46" str="[" scope="0x5c73f5f01260" link="0x5c73f5f0b430" astParent="0x5c73f5f0b530" astOperand1="0x5c73f5f0b270" astOperand2="0x5c73f5f0b3d0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0b3d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="47" str="SwitchNum" scope="0x5c73f5f01260" type="name" varId="15" variable="0x5c73f5f01a80" values="0x5c73f5f0ce00" astParent="0x5c73f5f0b2d0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0b430" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="56" str="]" scope="0x5c73f5f01260" link="0x5c73f5f0b2d0"/>
+    <token id="0x5c73f5f0b530" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="57" str="." scope="0x5c73f5f01260" astParent="0x5c73f5f0b690" astOperand1="0x5c73f5f0b2d0" astOperand2="0x5c73f5f0b590" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f0b590" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="58" str="SW_Port" scope="0x5c73f5f01260" type="name" varId="18" variable="0x5c73f5f01460" astParent="0x5c73f5f0b530" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f0b690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="65" str="," scope="0x5c73f5f01260" astParent="0x5c73f5f0bb10" astOperand1="0x5c73f5f0b530" astOperand2="0x5c73f5f0b9b0"/>
+    <token id="0x5c73f5f0b6f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="66" str="Switches" scope="0x5c73f5f01260" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f0b7f0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0b7f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="74" str="[" scope="0x5c73f5f01260" link="0x5c73f5f0b950" astParent="0x5c73f5f0b9b0" astOperand1="0x5c73f5f0b6f0" astOperand2="0x5c73f5f0b850" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0b850" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="75" str="SwitchNum" scope="0x5c73f5f01260" type="name" varId="15" variable="0x5c73f5f01a80" values="0x5c73f5efe470" astParent="0x5c73f5f0b7f0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0b950" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="84" str="]" scope="0x5c73f5f01260" link="0x5c73f5f0b7f0"/>
+    <token id="0x5c73f5f0b9b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="85" str="." scope="0x5c73f5f01260" values="0x5c73f5f0e6a0" astParent="0x5c73f5f0b690" astOperand1="0x5c73f5f0b7f0" astOperand2="0x5c73f5f0bab0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0bab0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="86" str="SW_Pin" scope="0x5c73f5f01260" type="name" varId="19" variable="0x5c73f5f01540" values="0x5c73f5f0e770" astParent="0x5c73f5f0b9b0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0bb10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="92" str="," scope="0x5c73f5f01260" astParent="0x5c73f5f0b150" astOperand1="0x5c73f5f0b690" astOperand2="0x5c73f5f0bc10"/>
+    <token id="0x5c73f5f0bc10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="93" str="SwitchState" scope="0x5c73f5f01260" type="name" varId="16" variable="0x5c73f5f01b60" values="0x5c73f5f0fcc0" astParent="0x5c73f5f0bb10" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f0bc70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="104" str=")" scope="0x5c73f5f01260" link="0x5c73f5f0b150"/>
+    <token id="0x5c73f5f0bd70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="84" column="105" str=";" scope="0x5c73f5f01260"/>
+    <token id="0x5c73f5f0bdd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="9" str="*" scope="0x5c73f5f01260" type="op" isArithmeticalOp="true" values="0x5c73f5f0e840" astParent="0x5c73f5f0bf30" astOperand1="0x5c73f5f0bed0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0bed0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="10" str="SwitchState" scope="0x5c73f5f01260" type="name" varId="16" variable="0x5c73f5f01b60" astParent="0x5c73f5f0bdd0" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f0bf30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="21" str="=" scope="0x5c73f5f01260" type="op" isAssignmentOp="true" values="0x5c73f5f0e910" astOperand1="0x5c73f5f0bdd0" astOperand2="0x5c73f5f0c2f0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c030" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="22" str="(" scope="0x5c73f5f01260" link="0x5c73f5f0c1f0"/>
+    <token id="0x5c73f5f0c090" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="23" str="*" scope="0x5c73f5f01260" type="op" isArithmeticalOp="true" values="0x5c73f5f0e9e0" astParent="0x5c73f5f0c2f0" astOperand1="0x5c73f5f0c190" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c190" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="24" str="SwitchState" scope="0x5c73f5f01260" type="name" varId="16" variable="0x5c73f5f01b60" astParent="0x5c73f5f0c090" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x5c73f5f0c1f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="35" str=")" scope="0x5c73f5f01260" link="0x5c73f5f0c030"/>
+    <token id="0x5c73f5f0c2f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="36" str="^" scope="0x5c73f5f01260" type="op" values="0x5c73f5f0eb30" astParent="0x5c73f5f0bf30" astOperand1="0x5c73f5f0c090" astOperand2="0x5c73f5f0cf30" valueType-type="long" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c350" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="37" str="(" scope="0x5c73f5f01260" link="0x5c73f5f0d3c0"/>
+    <token id="0x5c73f5f0c450" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="38" str="(" scope="0x5c73f5f01260" link="0x5c73f5f0cd10"/>
+    <token id="0x5c73f5efb290" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="39" str="(" scope="0x5c73f5f01260" link="0x5c73f5f0c9d0"/>
+    <token id="0x5c73f5f0c540" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="40" str="Switches" scope="0x5c73f5f01260" type="name" varId="6" variable="0x5c73f5efe680" astParent="0x5c73f5f0c630" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0c630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="48" str="[" scope="0x5c73f5f01260" link="0x5c73f5f0c780" astParent="0x5c73f5f0c870" astOperand1="0x5c73f5f0c540" astOperand2="0x5c73f5f0c690" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5c73f5eff290"/>
+    <token id="0x5c73f5f0c690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="49" str="SwitchNum" scope="0x5c73f5f01260" type="name" varId="15" variable="0x5c73f5f01a80" values="0x5c73f5f0eb10" astParent="0x5c73f5f0c630" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c780" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="58" str="]" scope="0x5c73f5f01260" link="0x5c73f5f0c630"/>
+    <token id="0x5c73f5f0c870" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="59" str="." scope="0x5c73f5f01260" values="0x5c73f5f0ec70" astParent="0x5c73f5f0ca30" astOperand1="0x5c73f5f0c630" astOperand2="0x5c73f5f0c8d0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c8d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="60" str="SW_Connection" scope="0x5c73f5f01260" type="name" varId="20" variable="0x5c73f5f01620" values="0x5c73f5f0ed90" astParent="0x5c73f5f0c870" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0c9d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="73" str=")" scope="0x5c73f5f01260" link="0x5c73f5efb290"/>
+    <token id="0x5c73f5f0ca30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="74" str="&gt;&gt;" scope="0x5c73f5f01260" type="op" isArithmeticalOp="true" values="0x5c73f5f0eb50" astParent="0x5c73f5f0cf30" astOperand1="0x5c73f5f0c870" astOperand2="0x5c73f5f0cb30" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0cb30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="76" str="3UL" scope="0x5c73f5f01260" type="number" isInt="true" isExpandedMacro="true" values="0x5c73f5efca50" astParent="0x5c73f5f0ca30" valueType-type="long" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0cd10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="99" str=")" scope="0x5c73f5f01260" link="0x5c73f5f0c450"/>
+    <token id="0x5c73f5f0cf30" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="100" str="&amp;" scope="0x5c73f5f01260" type="op" values="0x5c73f5f00970" astParent="0x5c73f5f0c2f0" astOperand1="0x5c73f5f0ca30" astOperand2="0x5c73f5f0cf90" valueType-type="long" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0cf90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="102" str="1UL" scope="0x5c73f5f01260" type="number" isInt="true" isExpandedMacro="true" values="0x5c73f5efe8a0" astParent="0x5c73f5f0cf30" valueType-type="long" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5c73f5f0d3c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="129" str=")" scope="0x5c73f5f01260" link="0x5c73f5f0c350"/>
+    <token id="0x5c73f5f0d530" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="102" column="130" str=";" scope="0x5c73f5f01260"/>
+    <token id="0x5c73f5f0d630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="103" column="5" str="}" scope="0x5c73f5f01260" link="0x5c73f5f0ae20"/>
+    <token id="0x5c73f5f0ce20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="103" column="0" str="}" scope="0x5c73f5effa60" link="0x5c73f5f0cc00"/>
+    <token id="0x5c73f5f0d690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="104" column="5" str="return" scope="0x5c73f5eff740" type="name" astOperand1="0x5c73f5f0d790"/>
+    <token id="0x5c73f5f0d790" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="104" column="12" str="ReturnError" scope="0x5c73f5eff740" type="name" varId="17" variable="0x5c73f5f019a0" astParent="0x5c73f5f0d690"/>
+    <token id="0x5c73f5efd0a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="104" column="23" str=";" scope="0x5c73f5eff740"/>
+    <token id="0x5c73f5f0d880" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.c" linenr="105" column="4" str="}" scope="0x5c73f5eff740" link="0x5c73f5f09830"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x5c73f5efef70" type="Global">
+      <functionList>
+        <function id="0x5c73f5f02740" token="0x5c73f5f05630" tokenDef="0x5c73f5effe80" name="Switch_Init" type="Function"/>
+        <function id="0x5c73f5f02690" token="0x5c73f5f091b0" tokenDef="0x5c73f5f00690" name="Switch_GetState" type="Function">
+          <arg nr="1" variable="0x5c73f5f01a80"/>
+          <arg nr="2" variable="0x5c73f5f01b60"/>
+        </function>
+      </functionList>
+      <varlist>
+        <var id="0x5c73f5efe680"/>
+      </varlist>
+    </scope>
+    <scope id="0x5c73f5eff100" type="Enum" className="SW_NUM_t" bodyStart="0x5c73f5ef0680" bodyEnd="0x5c73f5ee3b50" nestedIn="0x5c73f5efef70"/>
+    <scope id="0x5c73f5eff290" type="Struct" className="SwitchCFG_t" bodyStart="0x5c73f5f05030" bodyEnd="0x5c73f5f00de0" nestedIn="0x5c73f5efef70">
+      <varlist>
+        <var id="0x5c73f5f01460"/>
+        <var id="0x5c73f5f01540"/>
+        <var id="0x5c73f5f01620"/>
+      </varlist>
+    </scope>
+    <scope id="0x5c73f5eff420" type="Function" className="Switch_Init" bodyStart="0x5c73f5f058f0" bodyEnd="0x5c73f5f09050" nestedIn="0x5c73f5efef70" function="0x5c73f5f02740">
+      <varlist>
+        <var id="0x5c73f5f01700"/>
+        <var id="0x5c73f5f017e0"/>
+        <var id="0x5c73f5f018c0"/>
+      </varlist>
+    </scope>
+    <scope id="0x5c73f5eff5b0" type="For" bodyStart="0x5c73f5f070b0" bodyEnd="0x5c73f5f08d90" nestedIn="0x5c73f5eff420"/>
+    <scope id="0x5c73f5eff740" type="Function" className="Switch_GetState" bodyStart="0x5c73f5f09830" bodyEnd="0x5c73f5f0d880" nestedIn="0x5c73f5efef70" function="0x5c73f5f02690">
+      <varlist>
+        <var id="0x5c73f5f019a0"/>
+      </varlist>
+    </scope>
+    <scope id="0x5c73f5eff8d0" type="If" bodyStart="0x5c73f5f09f10" bodyEnd="0x5c73f5f0a230" nestedIn="0x5c73f5eff740"/>
+    <scope id="0x5c73f5effa60" type="Else" bodyStart="0x5c73f5f0cc00" bodyEnd="0x5c73f5f0ce20" nestedIn="0x5c73f5eff740"/>
+    <scope id="0x5c73f5f010d0" type="If" bodyStart="0x5c73f5f0aa10" bodyEnd="0x5c73f5ef9920" nestedIn="0x5c73f5effa60"/>
+    <scope id="0x5c73f5f01260" type="Else" bodyStart="0x5c73f5f0ae20" bodyEnd="0x5c73f5f0d630" nestedIn="0x5c73f5effa60"/>
+  </scopes>
+  <variables>
+    <var id="0x5c73f5efe680" nameToken="0x5c73f5f05210" typeStartToken="0x5c73f5efda60" typeEndToken="0x5c73f5efda60" access="Global" scope="0x5c73f5efef70" constness="0" isArray="true" isClass="true" isConst="false" isExtern="true" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01460" nameToken="0x5c73f5efe310" typeStartToken="0x5c73f5f05120" typeEndToken="0x5c73f5efe220" access="Public" scope="0x5c73f5eff290" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01540" nameToken="0x5c73f5efe130" typeStartToken="0x5c73f5efe040" typeEndToken="0x5c73f5efe040" access="Public" scope="0x5c73f5eff290" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01620" nameToken="0x5c73f5f00c00" typeStartToken="0x5c73f5f00ab0" typeEndToken="0x5c73f5f00ab0" access="Public" scope="0x5c73f5eff290" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01700" nameToken="0x5c73f5efa680" typeStartToken="0x5c73f5efa620" typeEndToken="0x5c73f5efa620" access="Local" scope="0x5c73f5eff420" constness="0" isArray="false" isClass="true" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f017e0" nameToken="0x5c73f5f05c60" typeStartToken="0x5c73f5f05b60" typeEndToken="0x5c73f5f05b60" access="Local" scope="0x5c73f5eff420" constness="0" isArray="false" isClass="true" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f018c0" nameToken="0x5c73f5f05e20" typeStartToken="0x5c73f5f05dc0" typeEndToken="0x5c73f5f05dc0" access="Local" scope="0x5c73f5eff420" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f019a0" nameToken="0x5c73f5f09990" typeStartToken="0x5c73f5f09890" typeEndToken="0x5c73f5f09890" access="Local" scope="0x5c73f5eff740" constness="0" isArray="false" isClass="true" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01a80" nameToken="0x5c73f5f09410" typeStartToken="0x5c73f5f09310" typeEndToken="0x5c73f5f09310" access="Argument" scope="0x5c73f5eff740" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x5c73f5f01b60" nameToken="0x5c73f5f096d0" typeStartToken="0x5c73f5f09570" typeEndToken="0x5c73f5f095d0" access="Argument" scope="0x5c73f5eff740" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x5c73f5efa3c0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efbe70">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efd170">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efc810">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efa6e0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00700">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5ee3ab0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efc330">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efc5a0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efdad0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5eee670">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00e50">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efdf90">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efb670">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="0" bound="Upper" possible="true" path="0"/>
+      <value intvalue="1" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efeb30">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00be0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="0" bound="Upper" possible="true" path="0"/>
+      <value intvalue="1" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efe6e0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5ee43c0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5eefb90">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efffb0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="0" bound="Upper" possible="true" path="0"/>
+      <value intvalue="1" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00220">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5eee610">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5ee44f0">
+      <value lifetime="0x5c73f5f08bd0" lifetime-scope="Local" lifetime-kind="Address" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00490">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5ef9da0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efe200">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efcd20">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efeef0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0ce00">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" condition-line="78" impossible="true" path="0"/>
+      <value intvalue="1" bound="Upper" condition-line="78" possible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efe470">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0e6a0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0e770">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0fcc0">
+      <value intvalue="0" bound="Point" condition-line="74" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0e840">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0e910">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0e9e0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0eb30">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0eb10">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0ec70">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0ed90">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f0eb50">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efca50">
+      <value intvalue="3" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x5c73f5f00970">
+      <value intvalue="0" bound="Point" possible="true" path="0"/>
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x5c73f5efe8a0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+  </valueflow>
+  <typedef-info>
+    <info name="SwitchCFG_t" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" line="41" column="3" used="1"/>
+  </typedef-info>
+</dump>
+</dumps>

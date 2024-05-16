@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c"/>
+    <file index="1" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h"/>
+    <file index="2" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="2" column="1" str="/************************************************Includes************************************************/"/>
+    <tok fileIndex="0" linenr="3" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="4" column="1" str="#"/>
+    <tok fileIndex="0" linenr="4" column="2" str="include"/>
+    <tok fileIndex="0" linenr="4" column="10" str="&quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <tok fileIndex="0" linenr="5" column="1" str="#"/>
+    <tok fileIndex="0" linenr="5" column="2" str="include"/>
+    <tok fileIndex="0" linenr="5" column="10" str="&quot;SwitchSched.h&quot;"/>
+    <tok fileIndex="0" linenr="7" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="8" column="1" str="/************************************************Variables***************************************************/"/>
+    <tok fileIndex="0" linenr="9" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="11" column="1" str="HSwitchCFG_t"/>
+    <tok fileIndex="0" linenr="11" column="14" str="HSwitches"/>
+    <tok fileIndex="0" linenr="11" column="23" str="["/>
+    <tok fileIndex="0" linenr="11" column="24" str="_HSWITCHES_NUM"/>
+    <tok fileIndex="0" linenr="11" column="38" str="]"/>
+    <tok fileIndex="0" linenr="11" column="39" str="="/>
+    <tok fileIndex="0" linenr="12" column="1" str="{"/>
+    <tok fileIndex="0" linenr="13" column="5" str="/* Switches of Demo1 (StopWatch &amp; Time-Date)*/"/>
+    <tok fileIndex="0" linenr="15" column="5" str="["/>
+    <tok fileIndex="0" linenr="15" column="6" str="MODE_OK_SWITCH"/>
+    <tok fileIndex="0" linenr="15" column="20" str="]"/>
+    <tok fileIndex="0" linenr="15" column="21" str="="/>
+    <tok fileIndex="0" linenr="16" column="5" str="{"/>
+    <tok fileIndex="0" linenr="17" column="9" str="."/>
+    <tok fileIndex="0" linenr="17" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="17" column="17" str="="/>
+    <tok fileIndex="0" linenr="17" column="18" str="GPIO_PORTC"/>
+    <tok fileIndex="0" linenr="17" column="28" str=","/>
+    <tok fileIndex="0" linenr="18" column="9" str="."/>
+    <tok fileIndex="0" linenr="18" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="18" column="16" str="="/>
+    <tok fileIndex="0" linenr="18" column="17" str="GPIO_PIN13"/>
+    <tok fileIndex="0" linenr="18" column="27" str=","/>
+    <tok fileIndex="0" linenr="19" column="9" str="."/>
+    <tok fileIndex="0" linenr="19" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="19" column="23" str="="/>
+    <tok fileIndex="0" linenr="19" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="20" column="5" str="}"/>
+    <tok fileIndex="0" linenr="21" column="5" str=","/>
+    <tok fileIndex="0" linenr="22" column="5" str="["/>
+    <tok fileIndex="0" linenr="22" column="6" str="UP_SWITCH"/>
+    <tok fileIndex="0" linenr="22" column="15" str="]"/>
+    <tok fileIndex="0" linenr="22" column="16" str="="/>
+    <tok fileIndex="0" linenr="23" column="5" str="{"/>
+    <tok fileIndex="0" linenr="24" column="9" str="."/>
+    <tok fileIndex="0" linenr="24" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="24" column="17" str="="/>
+    <tok fileIndex="0" linenr="24" column="18" str="GPIO_PORTB"/>
+    <tok fileIndex="0" linenr="24" column="28" str=","/>
+    <tok fileIndex="0" linenr="25" column="9" str="."/>
+    <tok fileIndex="0" linenr="25" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="25" column="16" str="="/>
+    <tok fileIndex="0" linenr="25" column="17" str="GPIO_PIN8"/>
+    <tok fileIndex="0" linenr="25" column="26" str=","/>
+    <tok fileIndex="0" linenr="26" column="9" str="."/>
+    <tok fileIndex="0" linenr="26" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="26" column="23" str="="/>
+    <tok fileIndex="0" linenr="26" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="27" column="5" str="}"/>
+    <tok fileIndex="0" linenr="27" column="6" str=","/>
+    <tok fileIndex="0" linenr="28" column="5" str="["/>
+    <tok fileIndex="0" linenr="28" column="6" str="EDIT_SWITCH"/>
+    <tok fileIndex="0" linenr="28" column="17" str="]"/>
+    <tok fileIndex="0" linenr="28" column="18" str="="/>
+    <tok fileIndex="0" linenr="29" column="5" str="{"/>
+    <tok fileIndex="0" linenr="30" column="9" str="."/>
+    <tok fileIndex="0" linenr="30" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="30" column="17" str="="/>
+    <tok fileIndex="0" linenr="30" column="18" str="GPIO_PORTB"/>
+    <tok fileIndex="0" linenr="30" column="28" str=","/>
+    <tok fileIndex="0" linenr="31" column="9" str="."/>
+    <tok fileIndex="0" linenr="31" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="31" column="16" str="="/>
+    <tok fileIndex="0" linenr="31" column="17" str="GPIO_PIN9"/>
+    <tok fileIndex="0" linenr="31" column="26" str=","/>
+    <tok fileIndex="0" linenr="32" column="9" str="."/>
+    <tok fileIndex="0" linenr="32" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="32" column="23" str="="/>
+    <tok fileIndex="0" linenr="32" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="33" column="5" str="}"/>
+    <tok fileIndex="0" linenr="33" column="6" str=","/>
+    <tok fileIndex="0" linenr="34" column="5" str="["/>
+    <tok fileIndex="0" linenr="34" column="6" str="RIGHT_START_STOP_SWITCH"/>
+    <tok fileIndex="0" linenr="34" column="29" str="]"/>
+    <tok fileIndex="0" linenr="34" column="30" str="="/>
+    <tok fileIndex="0" linenr="35" column="5" str="{"/>
+    <tok fileIndex="0" linenr="36" column="9" str="."/>
+    <tok fileIndex="0" linenr="36" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="36" column="17" str="="/>
+    <tok fileIndex="0" linenr="36" column="18" str="GPIO_PORTB"/>
+    <tok fileIndex="0" linenr="36" column="28" str=","/>
+    <tok fileIndex="0" linenr="37" column="9" str="."/>
+    <tok fileIndex="0" linenr="37" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="37" column="16" str="="/>
+    <tok fileIndex="0" linenr="37" column="17" str="GPIO_PIN5"/>
+    <tok fileIndex="0" linenr="37" column="26" str=","/>
+    <tok fileIndex="0" linenr="38" column="9" str="."/>
+    <tok fileIndex="0" linenr="38" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="38" column="23" str="="/>
+    <tok fileIndex="0" linenr="38" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="39" column="5" str="}"/>
+    <tok fileIndex="0" linenr="39" column="6" str=","/>
+    <tok fileIndex="0" linenr="40" column="5" str="["/>
+    <tok fileIndex="0" linenr="40" column="6" str="LEFT_RESET_SWITCH"/>
+    <tok fileIndex="0" linenr="40" column="23" str="]"/>
+    <tok fileIndex="0" linenr="40" column="24" str="="/>
+    <tok fileIndex="0" linenr="41" column="5" str="{"/>
+    <tok fileIndex="0" linenr="42" column="9" str="."/>
+    <tok fileIndex="0" linenr="42" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="42" column="17" str="="/>
+    <tok fileIndex="0" linenr="42" column="18" str="GPIO_PORTB"/>
+    <tok fileIndex="0" linenr="42" column="28" str=","/>
+    <tok fileIndex="0" linenr="43" column="9" str="."/>
+    <tok fileIndex="0" linenr="43" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="43" column="16" str="="/>
+    <tok fileIndex="0" linenr="43" column="17" str="GPIO_PIN10"/>
+    <tok fileIndex="0" linenr="43" column="27" str=","/>
+    <tok fileIndex="0" linenr="44" column="9" str="."/>
+    <tok fileIndex="0" linenr="44" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="44" column="23" str="="/>
+    <tok fileIndex="0" linenr="44" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="45" column="5" str="}"/>
+    <tok fileIndex="0" linenr="45" column="6" str=","/>
+    <tok fileIndex="0" linenr="46" column="5" str="["/>
+    <tok fileIndex="0" linenr="46" column="6" str="DOWN_PAUSE_CONTINUE_SWITCH"/>
+    <tok fileIndex="0" linenr="46" column="32" str="]"/>
+    <tok fileIndex="0" linenr="46" column="33" str="="/>
+    <tok fileIndex="0" linenr="47" column="5" str="{"/>
+    <tok fileIndex="0" linenr="48" column="9" str="."/>
+    <tok fileIndex="0" linenr="48" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="48" column="17" str="="/>
+    <tok fileIndex="0" linenr="48" column="18" str="GPIO_PORTB"/>
+    <tok fileIndex="0" linenr="48" column="28" str=","/>
+    <tok fileIndex="0" linenr="49" column="9" str="."/>
+    <tok fileIndex="0" linenr="49" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="49" column="16" str="="/>
+    <tok fileIndex="0" linenr="49" column="17" str="GPIO_PIN12"/>
+    <tok fileIndex="0" linenr="49" column="27" str=","/>
+    <tok fileIndex="0" linenr="50" column="9" str="."/>
+    <tok fileIndex="0" linenr="50" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="50" column="23" str="="/>
+    <tok fileIndex="0" linenr="50" column="24" str="GPIO_IN_PU"/>
+    <tok fileIndex="0" linenr="51" column="5" str="}"/>
+    <tok fileIndex="0" linenr="53" column="5" str="/*[HSWITCH_1]=x    {x        .SW_Port=GPIO_PORTC,x        .SW_Pin=GPIO_PIN13,x        .SW_Connection=GPIO_IN_PD,x    }*/"/>
+    <tok fileIndex="0" linenr="59" column="1" str="}"/>
+    <tok fileIndex="0" linenr="59" column="2" str=";"/>
+  </rawtokens>
+  <suppressions>
+    <suppression errorId="unmatchedSuppression" />
+    <suppression errorId="missingIncludeSystem" />
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c89"/>
+    <cpp version="c++03"/>
+  </standards>
+  <directivelist>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="4" str="#include &quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="5" str="#include &quot;SwitchSched.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="1" str="#ifndef HAL_SWITCH_SCHEDULER_SWITCHSCHED_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="2" str="#define HAL_SWITCH_SCHEDULER_SWITCHSCHED_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="7" str="#include &quot;Std_Lib/Std_Libraries.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="8" str="#include &quot;SwitchSchedCFG.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="13" str="#define SWITCH_PRESSED (1UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="14" str="#define SWITCH_RELEASED (0UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="16" str="#define SW_PULL_UP (0x00000008UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="17" str="#define SW_PULL_DOWN (0x00000010UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="55" str="#endif"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="2" str="#ifndef HAL_SWITCH_SCHEDULER_SWITCHSCHEDCFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="3" str="#define HAL_SWITCH_SCHEDULER_SWITCHSCHEDCFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="37" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x575be4449f70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="20" column="9" str="enum" scope="0x575be444a500" type="name"/>
+    <token id="0x575be444b560" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="20" column="0" str="HSwitch_NUM_t" scope="0x575be444a500" type="name" type-scope="0x575be444a690"/>
+    <token id="0x575be4439610" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="21" column="1" str="{" scope="0x575be444a690" link="0x575be444bd10" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be44327a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="22" column="5" str="MODE_OK_SWITCH" scope="0x575be444a690" type="name" values="0x575be4439520" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4432a00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="22" column="19" str="," scope="0x575be444a690"/>
+    <token id="0x575be444e060" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="23" column="5" str="UP_SWITCH" scope="0x575be444a690" type="name" values="0x575be4449c40" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4449690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="23" column="14" str="," scope="0x575be444a690"/>
+    <token id="0x575be4449780" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="24" column="5" str="EDIT_SWITCH" scope="0x575be444a690" type="name" values="0x575be44400d0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be44498c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="24" column="16" str="," scope="0x575be444a690"/>
+    <token id="0x575be4449330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="25" column="5" str="RIGHT_START_STOP_SWITCH" scope="0x575be444a690" type="name" values="0x575be4439580" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4449420" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="25" column="28" str="," scope="0x575be444a690"/>
+    <token id="0x575be4449510" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="26" column="5" str="LEFT_RESET_SWITCH" scope="0x575be444a690" type="name" values="0x575be443c800" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4449150" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="26" column="22" str="," scope="0x575be444a690"/>
+    <token id="0x575be4449240" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="27" column="5" str="DOWN_PAUSE_CONTINUE_SWITCH" scope="0x575be444a690" type="name" values="0x575be44499b0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be44492a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="27" column="31" str="," scope="0x575be444a690"/>
+    <token id="0x575be444bbc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="29" column="5" str="_HSWITCHES_NUM" scope="0x575be444a690" type="name" values="0x575be4433130" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be444bd10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="30" column="1" str="}" scope="0x575be444a690" link="0x575be4439610"/>
+    <token id="0x575be444bcb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.h" linenr="30" column="0" str=";" scope="0x575be444a500"/>
+    <token id="0x575be444b080" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="25" column="9" str="struct" scope="0x575be444a500" type="name"/>
+    <token id="0x575be444b170" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="25" column="0" str="HSwitchCFG_t" scope="0x575be444a500" type="name" type-scope="0x575be444a9b0"/>
+    <token id="0x575be444b2c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="25" column="16" str="{" scope="0x575be444a9b0" link="0x575be44478b0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x575be444a9b0"/>
+    <token id="0x575be444af90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="26" column="5" str="void" scope="0x575be444a9b0" type="name" astParent="0x575be444b830"/>
+    <token id="0x575be444b830" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="26" column="10" str="*" scope="0x575be444a9b0" type="op" isArithmeticalOp="true" astOperand1="0x575be444af90" astOperand2="0x575be444b920"/>
+    <token id="0x575be444b920" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="26" column="11" str="SW_Port" scope="0x575be444a9b0" type="name" varId="1" variable="0x575be4449060" astParent="0x575be444b830" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x575be444ba10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="26" column="18" str=";" scope="0x575be444a9b0"/>
+    <token id="0x575be444b650" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="35" column="5" str="uint32_t" scope="0x575be444a9b0" type="name"/>
+    <token id="0x575be444b740" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="35" column="14" str="SW_Pin" scope="0x575be444a9b0" type="name" varId="2" variable="0x575be4447400" values="0x575be4442960" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x575be444b7a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="35" column="20" str=";" scope="0x575be444a9b0"/>
+    <token id="0x575be444b470" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="37" column="5" str="uint32_t" scope="0x575be444a9b0" type="name"/>
+    <token id="0x575be44476d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="37" column="14" str="SW_Connection" scope="0x575be444a9b0" type="name" varId="3" variable="0x575be444abb0" values="0x575be4441240" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x575be44477c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="37" column="27" str=";" scope="0x575be444a9b0"/>
+    <token id="0x575be44478b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="41" column="1" str="}" scope="0x575be444a9b0" link="0x575be444b2c0"/>
+    <token id="0x575be444be00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="41" column="0" str=";" scope="0x575be444a500"/>
+    <token id="0x575be4447640" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="1" str="ErrorStatus_t" scope="0x575be444a500" type="name"/>
+    <token id="0x575be44465a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="15" str="HSwitch_Init" scope="0x575be444a500" type="name" function="0x575be444d850"/>
+    <token id="0x575be4446690" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="27" str="(" scope="0x575be444a500" link="0x575be4445900"/>
+    <token id="0x575be4445810" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="28" str="void" scope="0x575be444a500" type="name"/>
+    <token id="0x575be4445900" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="32" str=")" scope="0x575be444a500" link="0x575be4446690"/>
+    <token id="0x575be44459f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="49" column="33" str=";" scope="0x575be444a500"/>
+    <token id="0x575be44454f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="1" str="ErrorStatus_t" scope="0x575be444a500" type="name"/>
+    <token id="0x575be44455e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="15" str="HSwitch_GetState" scope="0x575be444a500" type="name" function="0x575be444d7a0"/>
+    <token id="0x575be44456d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="31" str="(" scope="0x575be444a500" link="0x575be44505f0"/>
+    <token id="0x575be44501d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="32" str="uint32_t" scope="0x575be444a500" type="name"/>
+    <token id="0x575be4450230" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="41" str="SwitchNum" scope="0x575be444a500" type="name" varId="4" variable="0x575be444ac90" values="0x575be44476b0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x575be4450330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="51" str="," scope="0x575be444a500"/>
+    <token id="0x575be4450390" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="52" str="uint32_t" scope="0x575be444a500" type="name" astParent="0x575be4450490"/>
+    <token id="0x575be4450490" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="60" str="*" scope="0x575be444a500" type="op" isArithmeticalOp="true" astOperand1="0x575be4450390" astOperand2="0x575be44504f0"/>
+    <token id="0x575be44504f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="62" str="SwitchState" scope="0x575be444a500" type="name" varId="5" variable="0x575be444ad70" astParent="0x575be4450490" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x575be44505f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="73" str=")" scope="0x575be444a500" link="0x575be44456d0"/>
+    <token id="0x575be4445410" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" linenr="50" column="74" str=";" scope="0x575be444a500"/>
+    <token id="0x575be4445470" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="1" str="struct" scope="0x575be444a500" type="name"/>
+    <token id="0x575be443ec90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="0" str="HSwitchCFG_t" scope="0x575be444a500" type="name" type-scope="0x575be444a9b0"/>
+    <token id="0x575be4450770" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="14" str="HSwitches" scope="0x575be444a500" type="name" varId="6" variable="0x575be4453940" astParent="0x575be4450860" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x575be444a9b0"/>
+    <token id="0x575be4450860" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="23" str="[" scope="0x575be444a500" link="0x575be44509c0" astParent="0x575be4450ac0" astOperand1="0x575be4450770" astOperand2="0x575be4450960" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x575be444a9b0"/>
+    <token id="0x575be4450960" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="24" str="_HSWITCHES_NUM" scope="0x575be444a500" type="name" values="0x575be4433000" astParent="0x575be4450860" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be44509c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="38" str="]" scope="0x575be444a500" link="0x575be4450860"/>
+    <token id="0x575be4450ac0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="11" column="39" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astOperand1="0x575be4450860" astOperand2="0x575be4450b20" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x575be444a9b0"/>
+    <token id="0x575be4450b20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="12" column="1" str="{" scope="0x575be444a500" link="0x575be4456230" astParent="0x575be4450ac0" astOperand1="0x575be443bf80"/>
+    <token id="0x575be4450c20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="15" column="5" str="[" scope="0x575be444a500" link="0x575be4450d80" astParent="0x575be443c360" astOperand1="0x575be4450c80"/>
+    <token id="0x575be4450c80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="15" column="6" str="MODE_OK_SWITCH" scope="0x575be444a500" type="name" values="0x575be4432960" astParent="0x575be4450c20" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4450d80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="15" column="20" str="]" scope="0x575be444a500" link="0x575be4450c20"/>
+    <token id="0x575be443c360" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="15" column="21" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be44519b0" astOperand1="0x575be4450c20" astOperand2="0x575be443c3c0"/>
+    <token id="0x575be443c3c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="16" column="5" str="{" scope="0x575be444a500" link="0x575be44518c0" astParent="0x575be443c360" astOperand1="0x575be4451570"/>
+    <token id="0x575be4450f00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="17" column="9" str="." scope="0x575be444a500" astParent="0x575be44510f0" astOperand1="0x575be4450ff0"/>
+    <token id="0x575be4450ff0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="17" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4450f00"/>
+    <token id="0x575be44510f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="17" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4451250" astOperand1="0x575be4450f00" astOperand2="0x575be4451150"/>
+    <token id="0x575be4451150" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="17" column="18" str="GPIO_PORTC" scope="0x575be444a500" type="name" astParent="0x575be44510f0"/>
+    <token id="0x575be4451250" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="17" column="28" str="," scope="0x575be444a500" astParent="0x575be4451570" astOperand1="0x575be44510f0" astOperand2="0x575be4451410"/>
+    <token id="0x575be44512b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="18" column="9" str="." scope="0x575be444a500" astParent="0x575be4451410" astOperand1="0x575be44513b0"/>
+    <token id="0x575be44513b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="18" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be44512b0"/>
+    <token id="0x575be4451410" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="18" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4451250" astOperand1="0x575be44512b0" astOperand2="0x575be4451510"/>
+    <token id="0x575be4451510" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="18" column="17" str="GPIO_PIN13" scope="0x575be444a500" type="name" astParent="0x575be4451410"/>
+    <token id="0x575be4451570" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="18" column="27" str="," scope="0x575be444a500" astParent="0x575be443c3c0" astOperand1="0x575be4451250" astOperand2="0x575be44517d0"/>
+    <token id="0x575be4451670" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="19" column="9" str="." scope="0x575be444a500" astParent="0x575be44517d0" astOperand1="0x575be44516d0"/>
+    <token id="0x575be44516d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="19" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be4451670"/>
+    <token id="0x575be44517d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="19" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4451570" astOperand1="0x575be4451670" astOperand2="0x575be443c7a0"/>
+    <token id="0x575be443c7a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="19" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be44517d0"/>
+    <token id="0x575be44518c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="20" column="5" str="}" scope="0x575be444a500" link="0x575be443c3c0"/>
+    <token id="0x575be44519b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="21" column="5" str="," scope="0x575be444a500" astParent="0x575be4452850" astOperand1="0x575be443c360" astOperand2="0x575be4451c50"/>
+    <token id="0x575be4451a10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="22" column="5" str="[" scope="0x575be444a500" link="0x575be4451bf0" astParent="0x575be4451c50" astOperand1="0x575be4451b00"/>
+    <token id="0x575be4451b00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="22" column="6" str="UP_SWITCH" scope="0x575be444a500" type="name" values="0x575be443ffc0" astParent="0x575be4451a10" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4451bf0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="22" column="15" str="]" scope="0x575be444a500" link="0x575be4451a10"/>
+    <token id="0x575be4451c50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="22" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be44519b0" astOperand1="0x575be4451a10" astOperand2="0x575be4451d50"/>
+    <token id="0x575be4451d50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="23" column="5" str="{" scope="0x575be444a500" link="0x575be4452750" astParent="0x575be4451c50" astOperand1="0x575be44523c0"/>
+    <token id="0x575be4451db0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="24" column="9" str="." scope="0x575be444a500" astParent="0x575be4451f10" astOperand1="0x575be4451eb0"/>
+    <token id="0x575be4451eb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="24" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4451db0"/>
+    <token id="0x575be4451f10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="24" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4452070" astOperand1="0x575be4451db0" astOperand2="0x575be4452010"/>
+    <token id="0x575be4452010" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="24" column="18" str="GPIO_PORTB" scope="0x575be444a500" type="name" astParent="0x575be4451f10"/>
+    <token id="0x575be4452070" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="24" column="28" str="," scope="0x575be444a500" astParent="0x575be44523c0" astOperand1="0x575be4451f10" astOperand2="0x575be44522d0"/>
+    <token id="0x575be4452170" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="25" column="9" str="." scope="0x575be444a500" astParent="0x575be44522d0" astOperand1="0x575be44521d0"/>
+    <token id="0x575be44521d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="25" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be4452170"/>
+    <token id="0x575be44522d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="25" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4452070" astOperand1="0x575be4452170" astOperand2="0x575be4447390"/>
+    <token id="0x575be4447390" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="25" column="17" str="GPIO_PIN8" scope="0x575be444a500" type="name" astParent="0x575be44522d0"/>
+    <token id="0x575be44523c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="25" column="26" str="," scope="0x575be444a500" astParent="0x575be4451d50" astOperand1="0x575be4452070" astOperand2="0x575be4452600"/>
+    <token id="0x575be44524b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="26" column="9" str="." scope="0x575be444a500" astParent="0x575be4452600" astOperand1="0x575be4452510"/>
+    <token id="0x575be4452510" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="26" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be44524b0"/>
+    <token id="0x575be4452600" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="26" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be44523c0" astOperand1="0x575be44524b0" astOperand2="0x575be44526f0"/>
+    <token id="0x575be44526f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="26" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be4452600"/>
+    <token id="0x575be4452750" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="27" column="5" str="}" scope="0x575be444a500" link="0x575be4451d50"/>
+    <token id="0x575be4452850" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="27" column="6" str="," scope="0x575be444a500" astParent="0x575be4453670" astOperand1="0x575be44519b0" astOperand2="0x575be4452b10"/>
+    <token id="0x575be44528b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="28" column="5" str="[" scope="0x575be444a500" link="0x575be4452a10" astParent="0x575be4452b10" astOperand1="0x575be44529b0"/>
+    <token id="0x575be44529b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="28" column="6" str="EDIT_SWITCH" scope="0x575be444a500" type="name" values="0x575be44454d0" astParent="0x575be44528b0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4452a10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="28" column="17" str="]" scope="0x575be444a500" link="0x575be44528b0"/>
+    <token id="0x575be4452b10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="28" column="18" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4452850" astOperand1="0x575be44528b0" astOperand2="0x575be4452b70"/>
+    <token id="0x575be4452b70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="29" column="5" str="{" scope="0x575be444a500" link="0x575be4453610" astParent="0x575be4452b10" astOperand1="0x575be4453250"/>
+    <token id="0x575be4452c70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="30" column="9" str="." scope="0x575be444a500" astParent="0x575be4452dd0" astOperand1="0x575be4452cd0"/>
+    <token id="0x575be4452cd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="30" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4452c70"/>
+    <token id="0x575be4452dd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="30" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4452ec0" astOperand1="0x575be4452c70" astOperand2="0x575be4448ff0"/>
+    <token id="0x575be4448ff0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="30" column="18" str="GPIO_PORTB" scope="0x575be444a500" type="name" astParent="0x575be4452dd0"/>
+    <token id="0x575be4452ec0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="30" column="28" str="," scope="0x575be444a500" astParent="0x575be4453250" astOperand1="0x575be4452dd0" astOperand2="0x575be4453100"/>
+    <token id="0x575be4452fb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="31" column="9" str="." scope="0x575be444a500" astParent="0x575be4453100" astOperand1="0x575be4453010"/>
+    <token id="0x575be4453010" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="31" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be4452fb0"/>
+    <token id="0x575be4453100" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="31" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4452ec0" astOperand1="0x575be4452fb0" astOperand2="0x575be44531f0"/>
+    <token id="0x575be44531f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="31" column="17" str="GPIO_PIN9" scope="0x575be444a500" type="name" astParent="0x575be4453100"/>
+    <token id="0x575be4453250" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="31" column="26" str="," scope="0x575be444a500" astParent="0x575be4452b70" astOperand1="0x575be4452ec0" astOperand2="0x575be44534b0"/>
+    <token id="0x575be4453350" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="32" column="9" str="." scope="0x575be444a500" astParent="0x575be44534b0" astOperand1="0x575be44533b0"/>
+    <token id="0x575be44533b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="32" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be4453350"/>
+    <token id="0x575be44534b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="32" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4453250" astOperand1="0x575be4453350" astOperand2="0x575be4453510"/>
+    <token id="0x575be4453510" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="32" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be44534b0"/>
+    <token id="0x575be4453610" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="33" column="5" str="}" scope="0x575be444a500" link="0x575be4452b70"/>
+    <token id="0x575be4453670" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="33" column="6" str="," scope="0x575be444a500" astParent="0x575be4454500" astOperand1="0x575be4452850" astOperand2="0x575be44539a0"/>
+    <token id="0x575be4453770" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="34" column="5" str="[" scope="0x575be444a500" link="0x575be44538d0" astParent="0x575be44539a0" astOperand1="0x575be44537d0"/>
+    <token id="0x575be44537d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="34" column="6" str="RIGHT_START_STOP_SWITCH" scope="0x575be444a500" type="name" values="0x575be443c420" astParent="0x575be4453770" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be44538d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="34" column="29" str="]" scope="0x575be444a500" link="0x575be4453770"/>
+    <token id="0x575be44539a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="34" column="30" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4453670" astOperand1="0x575be4453770" astOperand2="0x575be4453a00"/>
+    <token id="0x575be4453a00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="35" column="5" str="{" scope="0x575be444a500" link="0x575be44544a0" astParent="0x575be44539a0" astOperand1="0x575be4446ef0"/>
+    <token id="0x575be4453b00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="36" column="9" str="." scope="0x575be444a500" astParent="0x575be4453c60" astOperand1="0x575be4453b60"/>
+    <token id="0x575be4453b60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="36" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4453b00"/>
+    <token id="0x575be4453c60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="36" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4453dc0" astOperand1="0x575be4453b00" astOperand2="0x575be4453cc0"/>
+    <token id="0x575be4453cc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="36" column="18" str="GPIO_PORTB" scope="0x575be444a500" type="name" astParent="0x575be4453c60"/>
+    <token id="0x575be4453dc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="36" column="28" str="," scope="0x575be444a500" astParent="0x575be4446ef0" astOperand1="0x575be4453c60" astOperand2="0x575be4453f80"/>
+    <token id="0x575be4453e20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="37" column="9" str="." scope="0x575be444a500" astParent="0x575be4453f80" astOperand1="0x575be4453f20"/>
+    <token id="0x575be4453f20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="37" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be4453e20"/>
+    <token id="0x575be4453f80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="37" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4453dc0" astOperand1="0x575be4453e20" astOperand2="0x575be4454080"/>
+    <token id="0x575be4454080" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="37" column="17" str="GPIO_PIN5" scope="0x575be444a500" type="name" astParent="0x575be4453f80"/>
+    <token id="0x575be4446ef0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="37" column="26" str="," scope="0x575be444a500" astParent="0x575be4453a00" astOperand1="0x575be4453dc0" astOperand2="0x575be44542c0"/>
+    <token id="0x575be4454170" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="38" column="9" str="." scope="0x575be444a500" astParent="0x575be44542c0" astOperand1="0x575be4454260"/>
+    <token id="0x575be4454260" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="38" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be4454170"/>
+    <token id="0x575be44542c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="38" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4446ef0" astOperand1="0x575be4454170" astOperand2="0x575be44543b0"/>
+    <token id="0x575be44543b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="38" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be44542c0"/>
+    <token id="0x575be44544a0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="39" column="5" str="}" scope="0x575be444a500" link="0x575be4453a00"/>
+    <token id="0x575be4454500" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="39" column="6" str="," scope="0x575be444a500" astParent="0x575be443bf80" astOperand1="0x575be4453670" astOperand2="0x575be4454830"/>
+    <token id="0x575be4454600" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="40" column="5" str="[" scope="0x575be444a500" link="0x575be4454760" astParent="0x575be4454830" astOperand1="0x575be4454660"/>
+    <token id="0x575be4454660" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="40" column="6" str="LEFT_RESET_SWITCH" scope="0x575be444a500" type="name" values="0x575be4439370" astParent="0x575be4454600" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4454760" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="40" column="23" str="]" scope="0x575be444a500" link="0x575be4454600"/>
+    <token id="0x575be4454830" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="40" column="24" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4454500" astOperand1="0x575be4454600" astOperand2="0x575be4454890"/>
+    <token id="0x575be4454890" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="41" column="5" str="{" scope="0x575be444a500" link="0x575be4455330" astParent="0x575be4454830" astOperand1="0x575be4454f70"/>
+    <token id="0x575be4454990" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="42" column="9" str="." scope="0x575be444a500" astParent="0x575be4454af0" astOperand1="0x575be44549f0"/>
+    <token id="0x575be44549f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="42" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4454990"/>
+    <token id="0x575be4454af0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="42" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4454c50" astOperand1="0x575be4454990" astOperand2="0x575be4454b50"/>
+    <token id="0x575be4454b50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="42" column="18" str="GPIO_PORTB" scope="0x575be444a500" type="name" astParent="0x575be4454af0"/>
+    <token id="0x575be4454c50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="42" column="28" str="," scope="0x575be444a500" astParent="0x575be4454f70" astOperand1="0x575be4454af0" astOperand2="0x575be4454e10"/>
+    <token id="0x575be4454cb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="43" column="9" str="." scope="0x575be444a500" astParent="0x575be4454e10" astOperand1="0x575be4454db0"/>
+    <token id="0x575be4454db0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="43" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be4454cb0"/>
+    <token id="0x575be4454e10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="43" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4454c50" astOperand1="0x575be4454cb0" astOperand2="0x575be4454f10"/>
+    <token id="0x575be4454f10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="43" column="17" str="GPIO_PIN10" scope="0x575be444a500" type="name" astParent="0x575be4454e10"/>
+    <token id="0x575be4454f70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="43" column="27" str="," scope="0x575be444a500" astParent="0x575be4454890" astOperand1="0x575be4454c50" astOperand2="0x575be44551d0"/>
+    <token id="0x575be4455070" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="44" column="9" str="." scope="0x575be444a500" astParent="0x575be44551d0" astOperand1="0x575be44550d0"/>
+    <token id="0x575be44550d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="44" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be4455070"/>
+    <token id="0x575be44551d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="44" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4454f70" astOperand1="0x575be4455070" astOperand2="0x575be4455230"/>
+    <token id="0x575be4455230" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="44" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be44551d0"/>
+    <token id="0x575be4455330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="45" column="5" str="}" scope="0x575be444a500" link="0x575be4454890"/>
+    <token id="0x575be443bf80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="45" column="6" str="," scope="0x575be444a500" astParent="0x575be4450b20" astOperand1="0x575be4454500" astOperand2="0x575be44556d0"/>
+    <token id="0x575be4455390" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="46" column="5" str="[" scope="0x575be444a500" link="0x575be4455570" astParent="0x575be44556d0" astOperand1="0x575be4455480"/>
+    <token id="0x575be4455480" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="46" column="6" str="DOWN_PAUSE_CONTINUE_SWITCH" scope="0x575be444a500" type="name" values="0x575be44392d0" astParent="0x575be4455390" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x575be444a690"/>
+    <token id="0x575be4455570" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="46" column="32" str="]" scope="0x575be444a500" link="0x575be4455390"/>
+    <token id="0x575be44556d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="46" column="33" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be443bf80" astOperand1="0x575be4455390" astOperand2="0x575be4455730"/>
+    <token id="0x575be4455730" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="47" column="5" str="{" scope="0x575be444a500" link="0x575be44561d0" astParent="0x575be44556d0" astOperand1="0x575be4455e10"/>
+    <token id="0x575be4455830" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="48" column="9" str="." scope="0x575be444a500" astParent="0x575be4455990" astOperand1="0x575be4455890"/>
+    <token id="0x575be4455890" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="48" column="10" str="SW_Port" scope="0x575be444a500" type="name" astParent="0x575be4455830"/>
+    <token id="0x575be4455990" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="48" column="17" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4455af0" astOperand1="0x575be4455830" astOperand2="0x575be44559f0"/>
+    <token id="0x575be44559f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="48" column="18" str="GPIO_PORTB" scope="0x575be444a500" type="name" astParent="0x575be4455990"/>
+    <token id="0x575be4455af0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="48" column="28" str="," scope="0x575be444a500" astParent="0x575be4455e10" astOperand1="0x575be4455990" astOperand2="0x575be4455cb0"/>
+    <token id="0x575be4455b50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="49" column="9" str="." scope="0x575be444a500" astParent="0x575be4455cb0" astOperand1="0x575be4455c50"/>
+    <token id="0x575be4455c50" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="49" column="10" str="SW_Pin" scope="0x575be444a500" type="name" astParent="0x575be4455b50"/>
+    <token id="0x575be4455cb0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="49" column="16" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4455af0" astOperand1="0x575be4455b50" astOperand2="0x575be4455db0"/>
+    <token id="0x575be4455db0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="49" column="17" str="GPIO_PIN12" scope="0x575be444a500" type="name" astParent="0x575be4455cb0"/>
+    <token id="0x575be4455e10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="49" column="27" str="," scope="0x575be444a500" astParent="0x575be4455730" astOperand1="0x575be4455af0" astOperand2="0x575be4456070"/>
+    <token id="0x575be4455f10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="50" column="9" str="." scope="0x575be444a500" astParent="0x575be4456070" astOperand1="0x575be4455f70"/>
+    <token id="0x575be4455f70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="50" column="10" str="SW_Connection" scope="0x575be444a500" type="name" astParent="0x575be4455f10"/>
+    <token id="0x575be4456070" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="50" column="23" str="=" scope="0x575be444a500" type="op" isAssignmentOp="true" astParent="0x575be4455e10" astOperand1="0x575be4455f10" astOperand2="0x575be44560d0"/>
+    <token id="0x575be44560d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="50" column="24" str="GPIO_IN_PU" scope="0x575be444a500" type="name" astParent="0x575be4456070"/>
+    <token id="0x575be44561d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="51" column="5" str="}" scope="0x575be444a500" link="0x575be4455730"/>
+    <token id="0x575be4456230" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="59" column="1" str="}" scope="0x575be444a500" link="0x575be4450b20"/>
+    <token id="0x575be4456330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSchedCFG.c" linenr="59" column="2" str=";" scope="0x575be444a500"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x575be444a500" type="Global">
+      <functionList>
+        <function id="0x575be444d850" token="0" tokenDef="0x575be44465a0" name="HSwitch_Init" type="Function"/>
+        <function id="0x575be444d7a0" token="0" tokenDef="0x575be44455e0" name="HSwitch_GetState" type="Function">
+          <arg nr="1" variable="0x575be444ac90"/>
+          <arg nr="2" variable="0x575be444ad70"/>
+        </function>
+      </functionList>
+      <varlist>
+        <var id="0x575be4453940"/>
+      </varlist>
+    </scope>
+    <scope id="0x575be444a690" type="Enum" className="HSwitch_NUM_t" bodyStart="0x575be4439610" bodyEnd="0x575be444bd10" nestedIn="0x575be444a500"/>
+    <scope id="0x575be444a9b0" type="Struct" className="HSwitchCFG_t" bodyStart="0x575be444b2c0" bodyEnd="0x575be44478b0" nestedIn="0x575be444a500">
+      <varlist>
+        <var id="0x575be4449060"/>
+        <var id="0x575be4447400"/>
+        <var id="0x575be444abb0"/>
+      </varlist>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x575be4447400" nameToken="0x575be444b740" typeStartToken="0x575be444b650" typeEndToken="0x575be444b650" access="Public" scope="0x575be444a9b0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x575be4449060" nameToken="0x575be444b920" typeStartToken="0x575be444af90" typeEndToken="0x575be444b830" access="Public" scope="0x575be444a9b0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x575be444abb0" nameToken="0x575be44476d0" typeStartToken="0x575be444b470" typeEndToken="0x575be444b470" access="Public" scope="0x575be444a9b0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x575be444ac90" nameToken="0x575be4450230" typeStartToken="0x575be44501d0" typeEndToken="0x575be44501d0" access="Argument" scope="0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x575be444ad70" nameToken="0x575be44504f0" typeStartToken="0x575be4450390" typeEndToken="0x575be4450490" access="Argument" scope="0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x575be4453940" nameToken="0x575be4450770" typeStartToken="0x575be443ec90" typeEndToken="0x575be443ec90" access="Global" scope="0x575be444a500" constness="0" isArray="true" isClass="true" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x575be4439520">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4449c40">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be44400d0">
+      <value intvalue="2" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4439580">
+      <value intvalue="3" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be443c800">
+      <value intvalue="4" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be44499b0">
+      <value intvalue="5" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4433130">
+      <value intvalue="6" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4442960">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x575be4441240">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x575be44476b0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x575be4433000">
+      <value intvalue="6" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4432960">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be443ffc0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be44454d0">
+      <value intvalue="2" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be443c420">
+      <value intvalue="3" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be4439370">
+      <value intvalue="4" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x575be44392d0">
+      <value intvalue="5" bound="Point" known="true" path="0"/>
+    </values>
+  </valueflow>
+  <typedef-info>
+    <info name="HSwitchCFG_t" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/Switch_Scheduler/SwitchSched.h" line="41" column="3" used="1"/>
+  </typedef-info>
+</dump>
+</dumps>

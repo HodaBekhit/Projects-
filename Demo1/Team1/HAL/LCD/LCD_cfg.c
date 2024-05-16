@@ -1,0 +1,24 @@
+/*
+ * LCD_cfg.c
+ *
+ *  Created on: Mar 30, 2024
+ *      Author: Dell
+ */
+
+
+#include "LCD.h"
+
+const LCD_PinCgf_t LCD_PINS_CFG[LCD_PINS_NUM]={
+
+		[LCD_RS]={.PORT=GPIO_A, .PIN=GPIO_PIN0},
+		[LCD_RW]={.PORT=GPIO_A , .PIN=GPIO_PIN1},
+		[LCD_E]={.PORT= GPIO_A, .PIN=GPIO_PIN2},
+		[LCD_DB0]={.PORT=GPIO_B , .PIN=GPIO_PIN0},
+		[LCD_DB1]={.PORT=GPIO_B , .PIN=GPIO_PIN1},
+		[LCD_DB2]={.PORT=GPIO_B , .PIN=GPIO_PIN2},
+		[LCD_DB3]={.PORT=GPIO_B , .PIN=GPIO_PIN3},
+		[LCD_DB4]={.PORT=GPIO_B , .PIN=GPIO_PIN4},
+		[LCD_DB5]={.PORT=GPIO_B , .PIN=GPIO_PIN5},
+		[LCD_DB6]={.PORT=GPIO_B , .PIN=GPIO_PIN8},
+		[LCD_DB7]={.PORT=GPIO_B , .PIN=GPIO_PIN9}
+};

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c"/>
+    <file index="1" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h"/>
+    <file index="2" name="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="2" column="1" str="/************************************************Includes************************************************/"/>
+    <tok fileIndex="0" linenr="3" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="4" column="1" str="#"/>
+    <tok fileIndex="0" linenr="4" column="2" str="include"/>
+    <tok fileIndex="0" linenr="4" column="10" str="&quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <tok fileIndex="0" linenr="5" column="1" str="#"/>
+    <tok fileIndex="0" linenr="5" column="2" str="include"/>
+    <tok fileIndex="0" linenr="5" column="10" str="&quot;SWITCH.h&quot;"/>
+    <tok fileIndex="0" linenr="7" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="8" column="1" str="/************************************************Defines*************************************************/"/>
+    <tok fileIndex="0" linenr="9" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="13" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="14" column="1" str="/************************************************Types***************************************************/"/>
+    <tok fileIndex="0" linenr="15" column="1" str="/********************************************************************************************************/"/>
+    <tok fileIndex="0" linenr="17" column="1" str="SwitchCFG_t"/>
+    <tok fileIndex="0" linenr="17" column="13" str="Switches"/>
+    <tok fileIndex="0" linenr="17" column="21" str="["/>
+    <tok fileIndex="0" linenr="17" column="22" str="_SWITCHES_NUM"/>
+    <tok fileIndex="0" linenr="17" column="35" str="]"/>
+    <tok fileIndex="0" linenr="17" column="36" str="="/>
+    <tok fileIndex="0" linenr="18" column="1" str="{"/>
+    <tok fileIndex="0" linenr="19" column="5" str="["/>
+    <tok fileIndex="0" linenr="19" column="6" str="SWITCH_1"/>
+    <tok fileIndex="0" linenr="19" column="14" str="]"/>
+    <tok fileIndex="0" linenr="19" column="15" str="="/>
+    <tok fileIndex="0" linenr="20" column="5" str="{"/>
+    <tok fileIndex="0" linenr="21" column="9" str="."/>
+    <tok fileIndex="0" linenr="21" column="10" str="SW_Port"/>
+    <tok fileIndex="0" linenr="21" column="17" str="="/>
+    <tok fileIndex="0" linenr="21" column="18" str="GPIO_PORTC"/>
+    <tok fileIndex="0" linenr="21" column="28" str=","/>
+    <tok fileIndex="0" linenr="22" column="9" str="."/>
+    <tok fileIndex="0" linenr="22" column="10" str="SW_Pin"/>
+    <tok fileIndex="0" linenr="22" column="16" str="="/>
+    <tok fileIndex="0" linenr="22" column="17" str="GPIO_PIN13"/>
+    <tok fileIndex="0" linenr="22" column="27" str=","/>
+    <tok fileIndex="0" linenr="23" column="9" str="."/>
+    <tok fileIndex="0" linenr="23" column="10" str="SW_Connection"/>
+    <tok fileIndex="0" linenr="23" column="23" str="="/>
+    <tok fileIndex="0" linenr="23" column="24" str="GPIO_IN_PD"/>
+    <tok fileIndex="0" linenr="23" column="34" str=","/>
+    <tok fileIndex="0" linenr="24" column="5" str="}"/>
+    <tok fileIndex="0" linenr="25" column="1" str="}"/>
+    <tok fileIndex="0" linenr="25" column="2" str=";"/>
+  </rawtokens>
+  <suppressions>
+    <suppression errorId="unmatchedSuppression" />
+    <suppression errorId="missingIncludeSystem" />
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c89"/>
+    <cpp version="c++03"/>
+  </standards>
+  <directivelist>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="4" str="#include &quot;MCAL/GPIO/GPIO.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="5" str="#include &quot;SWITCH.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="1" str="#ifndef HAL_SWITCH_SWITCH_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="2" str="#define HAL_SWITCH_SWITCH_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="7" str="#include &quot;Std_Lib/Std_Libraries.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="8" str="#include &quot;SWITCH_CFG.h&quot;"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="13" str="#define SWITCH_PRESSED (1UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="14" str="#define SWITCH_RELEASED (0UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="16" str="#define SW_PULL_UP (0x00000008UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="17" str="#define SW_PULL_DOWN (0x00000010UL)"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="64" str="#endif"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="1" str="#ifndef HAL_SWITCH_SWITCH_CFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="2" str="#define HAL_SWITCH_SWITCH_CFG_H_"/>
+    <directive file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="55" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x56228116aa60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="30" column="9" str="enum" scope="0x5622811736a0" type="name"/>
+    <token id="0x56228117a450" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="30" column="0" str="SW_NUM_t" scope="0x5622811736a0" type="name" type-scope="0x562281173830"/>
+    <token id="0x562281170d80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="31" column="1" str="{" scope="0x562281173830" link="0x562281166f80" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x562281173830"/>
+    <token id="0x562281179050" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="32" column="5" str="SWITCH_1" scope="0x562281173830" type="name" values="0x562281173f40" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x562281173830"/>
+    <token id="0x5622811667b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="32" column="13" str="," scope="0x562281173830"/>
+    <token id="0x5622811668e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="33" column="5" str="_SWITCHES_NUM" scope="0x562281173830" type="name" values="0x562281168cf0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x562281173830"/>
+    <token id="0x562281166f80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="34" column="1" str="}" scope="0x562281173830" link="0x562281170d80"/>
+    <token id="0x56228117b080" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.h" linenr="34" column="0" str=";" scope="0x5622811736a0"/>
+    <token id="0x56228116fd40" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="9" str="struct" scope="0x5622811736a0" type="name"/>
+    <token id="0x562281178a60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="0" str="SwitchCFG_t" scope="0x5622811736a0" type="name" type-scope="0x5622811739c0"/>
+    <token id="0x562281178700" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="25" column="16" str="{" scope="0x5622811739c0" link="0x56228117a630" valueType-type="record" valueType-reference="None" valueType-typeScope="0x5622811739c0"/>
+    <token id="0x5622811787f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="5" str="void" scope="0x5622811739c0" type="name" astParent="0x5622811788e0"/>
+    <token id="0x5622811788e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="10" str="*" scope="0x5622811739c0" type="op" isArithmeticalOp="true" astOperand1="0x5622811787f0" astOperand2="0x562281178520"/>
+    <token id="0x562281178520" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="11" str="SW_Port" scope="0x5622811739c0" type="name" varId="1" variable="0x562281173bc0" astParent="0x5622811788e0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x562281178610" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="26" column="18" str=";" scope="0x5622811739c0"/>
+    <token id="0x562281178670" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="5" str="uint32_t" scope="0x5622811739c0" type="name"/>
+    <token id="0x56228117af90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="14" str="SW_Pin" scope="0x5622811739c0" type="name" varId="2" variable="0x562281173ca0" values="0x562281167140" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x56228117b0e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="35" column="20" str=";" scope="0x5622811739c0"/>
+    <token id="0x56228117b1d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="5" str="uint32_t" scope="0x5622811739c0" type="name"/>
+    <token id="0x56228117b2c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="14" str="SW_Connection" scope="0x5622811739c0" type="name" varId="3" variable="0x562281173d80" values="0x562281166aa0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x56228117a540" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="37" column="27" str=";" scope="0x5622811739c0"/>
+    <token id="0x56228117a630" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="41" column="1" str="}" scope="0x5622811739c0" link="0x562281178700"/>
+    <token id="0x56228117d400" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="41" column="0" str=";" scope="0x5622811736a0"/>
+    <token id="0x56228117ac00" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="1" str="ErrorStatus_t" scope="0x5622811736a0" type="name"/>
+    <token id="0x56228117acf0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="15" str="Switch_Init" scope="0x5622811736a0" type="name" function="0x56228117cc20"/>
+    <token id="0x56228117ade0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="26" str="(" scope="0x5622811736a0" link="0x56228117ab10"/>
+    <token id="0x56228117aa20" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="27" str="void" scope="0x5622811736a0" type="name"/>
+    <token id="0x56228117ab10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="31" str=")" scope="0x5622811736a0" link="0x56228117ade0"/>
+    <token id="0x56228117ab70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="49" column="32" str=";" scope="0x5622811736a0"/>
+    <token id="0x56228117a840" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="1" str="ErrorStatus_t" scope="0x5622811736a0" type="name"/>
+    <token id="0x562281176aa0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="15" str="Switch_GetState" scope="0x5622811736a0" type="name" function="0x56228117cb70"/>
+    <token id="0x562281176b90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="30" str="(" scope="0x5622811736a0" link="0x562281174be0"/>
+    <token id="0x562281176c80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="31" str="uint32_t" scope="0x5622811736a0" type="name"/>
+    <token id="0x5622811768c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="40" str="SwitchNum" scope="0x5622811736a0" type="name" varId="4" variable="0x562281173e60" values="0x562281179010" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x5622811769b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="50" str="," scope="0x5622811736a0"/>
+    <token id="0x562281176a10" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="51" str="uint32_t" scope="0x5622811736a0" type="name" astParent="0x562281175970"/>
+    <token id="0x562281175970" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="59" str="*" scope="0x5622811736a0" type="op" isArithmeticalOp="true" astOperand1="0x562281176a10" astOperand2="0x562281175a60"/>
+    <token id="0x562281175a60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="61" str="SwitchState" scope="0x5622811736a0" type="name" varId="5" variable="0x562281174ec0" astParent="0x562281175970" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x562281174be0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="72" str=")" scope="0x5622811736a0" link="0x562281176b90"/>
+    <token id="0x562281174cd0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" linenr="50" column="73" str=";" scope="0x5622811736a0"/>
+    <token id="0x562281174dc0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="1" str="struct" scope="0x5622811736a0" type="name"/>
+    <token id="0x56228116d2e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="0" str="SwitchCFG_t" scope="0x5622811736a0" type="name" type-scope="0x5622811739c0"/>
+    <token id="0x5622811748c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="13" str="Switches" scope="0x5622811736a0" type="name" varId="6" variable="0x562281178b60" astParent="0x5622811749b0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5622811739c0"/>
+    <token id="0x5622811749b0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="21" str="[" scope="0x5622811736a0" link="0x562281173f80" astParent="0x562281174070" astOperand1="0x5622811748c0" astOperand2="0x562281174aa0" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5622811739c0"/>
+    <token id="0x562281174aa0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="22" str="_SWITCHES_NUM" scope="0x5622811736a0" type="name" values="0x56228117d140" astParent="0x5622811749b0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x562281173830"/>
+    <token id="0x562281173f80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="35" str="]" scope="0x5622811736a0" link="0x5622811749b0"/>
+    <token id="0x562281174070" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="17" column="36" str="=" scope="0x5622811736a0" type="op" isAssignmentOp="true" astOperand1="0x5622811749b0" astOperand2="0x562281174160" valueType-type="record" valueType-pointer="1" valueType-reference="None" valueType-typeScope="0x5622811739c0"/>
+    <token id="0x562281174160" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="18" column="1" str="{" scope="0x5622811736a0" link="0x562281176050" astParent="0x562281174070" astOperand1="0x562281176640"/>
+    <token id="0x562281176370" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="19" column="5" str="[" scope="0x5622811736a0" link="0x562281176550" astParent="0x562281176640" astOperand1="0x562281176460"/>
+    <token id="0x562281176460" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="19" column="6" str="SWITCH_1" scope="0x5622811736a0" type="name" values="0x562281178d80" astParent="0x562281176370" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="0x562281173830"/>
+    <token id="0x562281176550" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="19" column="14" str="]" scope="0x5622811736a0" link="0x562281176370"/>
+    <token id="0x562281176640" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="19" column="15" str="=" scope="0x5622811736a0" type="op" isAssignmentOp="true" astParent="0x562281174160" astOperand1="0x562281176370" astOperand2="0x562281176730"/>
+    <token id="0x562281176730" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="20" column="5" str="{" scope="0x5622811736a0" link="0x562281175f60" astParent="0x562281176640" astOperand1="0x5622811746f0"/>
+    <token id="0x562281176790" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="21" column="9" str="." scope="0x5622811736a0" astParent="0x5622811781e0" astOperand1="0x5622811780f0"/>
+    <token id="0x5622811780f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="21" column="10" str="SW_Port" scope="0x5622811736a0" type="name" astParent="0x562281176790"/>
+    <token id="0x5622811781e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="21" column="17" str="=" scope="0x5622811736a0" type="op" isAssignmentOp="true" astParent="0x5622811783c0" astOperand1="0x562281176790" astOperand2="0x5622811782d0"/>
+    <token id="0x5622811782d0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="21" column="18" str="GPIO_PORTC" scope="0x5622811736a0" type="name" astParent="0x5622811781e0"/>
+    <token id="0x5622811783c0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="21" column="28" str="," scope="0x5622811736a0" astParent="0x5622811746f0" astOperand1="0x5622811781e0" astOperand2="0x562281174510"/>
+    <token id="0x562281174330" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="22" column="9" str="." scope="0x5622811736a0" astParent="0x562281174510" astOperand1="0x562281174420"/>
+    <token id="0x562281174420" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="22" column="10" str="SW_Pin" scope="0x5622811736a0" type="name" astParent="0x562281174330"/>
+    <token id="0x562281174510" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="22" column="16" str="=" scope="0x5622811736a0" type="op" isAssignmentOp="true" astParent="0x5622811783c0" astOperand1="0x562281174330" astOperand2="0x562281174600"/>
+    <token id="0x562281174600" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="22" column="17" str="GPIO_PIN13" scope="0x5622811736a0" type="name" astParent="0x562281174510"/>
+    <token id="0x5622811746f0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="22" column="27" str="," scope="0x5622811736a0" astParent="0x562281176730" astOperand1="0x5622811783c0" astOperand2="0x562281175c90"/>
+    <token id="0x5622811747e0" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="23" column="9" str="." scope="0x5622811736a0" astParent="0x562281175c90" astOperand1="0x562281174840"/>
+    <token id="0x562281174840" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="23" column="10" str="SW_Connection" scope="0x5622811736a0" type="name" astParent="0x5622811747e0"/>
+    <token id="0x562281175c90" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="23" column="23" str="=" scope="0x5622811736a0" type="op" isAssignmentOp="true" astParent="0x5622811746f0" astOperand1="0x5622811747e0" astOperand2="0x562281175d80"/>
+    <token id="0x562281175d80" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="23" column="24" str="GPIO_IN_PD" scope="0x5622811736a0" type="name" astParent="0x562281175c90"/>
+    <token id="0x562281175e70" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="23" column="34" str="," scope="0x5622811736a0"/>
+    <token id="0x562281175f60" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="24" column="5" str="}" scope="0x5622811736a0" link="0x562281176730"/>
+    <token id="0x562281176050" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="25" column="1" str="}" scope="0x5622811736a0" link="0x562281174160"/>
+    <token id="0x562281176140" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH_CFG.c" linenr="25" column="2" str=";" scope="0x5622811736a0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x5622811736a0" type="Global">
+      <functionList>
+        <function id="0x56228117cc20" token="0" tokenDef="0x56228117acf0" name="Switch_Init" type="Function"/>
+        <function id="0x56228117cb70" token="0" tokenDef="0x562281176aa0" name="Switch_GetState" type="Function">
+          <arg nr="1" variable="0x562281173e60"/>
+          <arg nr="2" variable="0x562281174ec0"/>
+        </function>
+      </functionList>
+      <varlist>
+        <var id="0x562281178b60"/>
+      </varlist>
+    </scope>
+    <scope id="0x562281173830" type="Enum" className="SW_NUM_t" bodyStart="0x562281170d80" bodyEnd="0x562281166f80" nestedIn="0x5622811736a0"/>
+    <scope id="0x5622811739c0" type="Struct" className="SwitchCFG_t" bodyStart="0x562281178700" bodyEnd="0x56228117a630" nestedIn="0x5622811736a0">
+      <varlist>
+        <var id="0x562281173bc0"/>
+        <var id="0x562281173ca0"/>
+        <var id="0x562281173d80"/>
+      </varlist>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x562281173bc0" nameToken="0x562281178520" typeStartToken="0x5622811787f0" typeEndToken="0x5622811788e0" access="Public" scope="0x5622811739c0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x562281173ca0" nameToken="0x56228117af90" typeStartToken="0x562281178670" typeEndToken="0x562281178670" access="Public" scope="0x5622811739c0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x562281173d80" nameToken="0x56228117b2c0" typeStartToken="0x56228117b1d0" typeEndToken="0x56228117b1d0" access="Public" scope="0x5622811739c0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x562281173e60" nameToken="0x5622811768c0" typeStartToken="0x562281176c80" typeEndToken="0x562281176c80" access="Argument" scope="0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x562281174ec0" nameToken="0x562281175a60" typeStartToken="0x562281176a10" typeEndToken="0x562281175970" access="Argument" scope="0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0x562281178b60" nameToken="0x5622811748c0" typeStartToken="0x56228116d2e0" typeEndToken="0x56228116d2e0" access="Global" scope="0x5622811736a0" constness="0" isArray="true" isClass="true" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x562281173f40">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x562281168cf0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x562281167140">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x562281166aa0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x562281179010">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x56228117d140">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x562281178d80">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+  </valueflow>
+  <typedef-info>
+    <info name="SwitchCFG_t" file="/home/anas/Demo1_AnYs/Demo-1/Team2/src/HAL/SWITCH/SWITCH.h" line="41" column="3" used="1"/>
+  </typedef-info>
+</dump>
+</dumps>
